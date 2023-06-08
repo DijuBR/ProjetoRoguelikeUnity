@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2938,6 +2938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InimigoAtirador
       objectReference: {fileID: 0}
+    - target: {fileID: 1226869240895135631, guid: e82edebe7633f9d458c8ad3041fd87bb, type: 3}
+      propertyPath: m_TagString
+      value: Inimigo
+      objectReference: {fileID: 0}
     - target: {fileID: 1226869242465282700, guid: e82edebe7633f9d458c8ad3041fd87bb, type: 3}
       propertyPath: m_Icon
       value: 
@@ -3168,6 +3172,10 @@ PrefabInstance:
     - target: {fileID: 7945763069804572664, guid: 6f38ac7bc65bd174bb7af8f3bfbfb782, type: 3}
       propertyPath: m_Name
       value: Inimigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945763069804572665, guid: 6f38ac7bc65bd174bb7af8f3bfbfb782, type: 3}
+      propertyPath: vidainimigo
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f38ac7bc65bd174bb7af8f3bfbfb782, type: 3}

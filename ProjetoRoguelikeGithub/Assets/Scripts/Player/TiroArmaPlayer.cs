@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class TiroArmaPlayer : MonoBehaviour
 {
@@ -34,5 +35,16 @@ public class TiroArmaPlayer : MonoBehaviour
         
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Inimigo"))
+        {
+            Destroy(this.gameObject);
+
+            GameObject.Find("Inimigo").GetComponent<Inimigo>().DanoInimigo();
+        }
+    }
+
+
+
 }

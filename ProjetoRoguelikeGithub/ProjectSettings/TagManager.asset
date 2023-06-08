@@ -11,6 +11,7 @@ TagManager:
   - PontoRot
   - Arma
   - TiroPlayerPos
+  - TiroPlayer
   layers:
   - Default
   - TransparentFX
