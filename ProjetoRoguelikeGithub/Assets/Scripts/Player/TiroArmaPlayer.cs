@@ -12,6 +12,7 @@ public class TiroArmaPlayer : MonoBehaviour
 
     public Rigidbody2D rb;
     public GameObject inimigo;
+    private Transform tiroPlayerPos;
     
 
 
@@ -19,9 +20,10 @@ public class TiroArmaPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tiroPlayerPos = GameObject.FindGameObjectWithTag("TiroPlayerPos").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         inimigo = GameObject.FindGameObjectWithTag("Inimigo");
-        rb.velocity = transform.right * velTiro;
+        rb.velocity = tiroPlayerPos.right * velTiro;
 
        
     }

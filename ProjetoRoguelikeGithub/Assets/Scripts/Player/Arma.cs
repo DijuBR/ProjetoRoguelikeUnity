@@ -7,27 +7,21 @@ public class Arma : MonoBehaviour
     public GameObject inimigo;
     public GameObject tiroPlayer;
     public Transform tiroPlayerPos;
-
-    private Camera mainCam;
-    public GameObject rbPlayer;
-    private Vector3 mousePos;
-
-    
-
-
-
+    public Transform arma;
     // Start is called before the first frame update
     void Start()
     {
         inimigo = GameObject.FindGameObjectWithTag("Inimigo");
-        mainCam = GameObject.FindGameObjectWithTag("Player").GetComponent<Camera>();
+        arma = GameObject.FindGameObjectWithTag("Arma").GetComponent<Transform>();
+
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         AtirarPlayer();
-        ArmaGirandoPlayer();
+       
     }
 
     void AtirarPlayer()
@@ -41,12 +35,5 @@ public class Arma : MonoBehaviour
     void CompararInimigo()
     {
 
-    }
-    void ArmaGirandoPlayer()
-    {
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 rotation = mousePos - transform.position;
-        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rotZ);
     }
 }
