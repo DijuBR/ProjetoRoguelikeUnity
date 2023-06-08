@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc8fa2ffb8e66940a8291b4ca4737b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 0
+  dano: 5
   delayTiro: 0
   velTiro: 10
   quantidadeTiro: 0

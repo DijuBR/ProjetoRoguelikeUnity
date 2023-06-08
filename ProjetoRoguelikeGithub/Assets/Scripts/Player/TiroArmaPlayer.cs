@@ -5,11 +5,14 @@ using UnityEngine.XR;
 
 public class TiroArmaPlayer : MonoBehaviour
 {
-    public float dano;
+    public int dano;
     public float delayTiro;
     public float velTiro;
     public float quantidadeTiro;
     public float disTiro;
+    public VidaInimigo VidaInimigo;
+
+    public GameObject inimigoAtual;
 
     public Rigidbody2D rb;
     public GameObject inimigo;
@@ -37,13 +40,13 @@ public class TiroArmaPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Inimigo"))
+        if (col.gameObject.tag == "Inimigo")
         {
-            Destroy(this.gameObject);
-
-            GameObject.Find("Inimigo").GetComponent<Inimigo>().DanoInimigo();
+                Destroy(this.gameObject);
+                col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
         }
     }
+    
 
 
 

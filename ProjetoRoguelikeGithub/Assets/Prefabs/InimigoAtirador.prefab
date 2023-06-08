@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1226869240895135625}
   - component: {fileID: 1226869240895135630}
   - component: {fileID: 1226869240895135626}
+  - component: {fileID: 3750479100027346073}
   m_Layer: 0
   m_Name: InimigoAtirador
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -121,6 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tiro: {fileID: 2184081737512972207, guid: 6e464e032962f4c4791ec31b22815bb9, type: 3}
   TiroPos: {fileID: 1226869242465282703}
+  Voador: 0
+  Atirando: 0
+  dist: 10
 --- !u!61 &1226869240895135626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,6 +151,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3750479100027346073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226869240895135631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaInimigo: 20
 --- !u!1 &1226869242465282700
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +176,7 @@ GameObject:
   m_Layer: 0
   m_Name: TiroPos
   m_TagString: Untagged
-  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

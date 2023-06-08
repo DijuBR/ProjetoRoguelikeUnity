@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MorteInimigo : MonoBehaviour
+public class VidaInimigo : MonoBehaviour
 {
+    public int vidaInimigo;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,15 +15,14 @@ public class MorteInimigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DanoInimigo();
     }
-
-
-    private void OnCollisionEnter2D(Collision2D col)
+    public void DanoInimigo()
     {
-        if (col.gameObject.CompareTag("TiroPlayer"))
+        if (vidaInimigo <= 0)
         {
-            Destroy(this.gameObject);
+            Debug.Log("Morto Inimigo");
+            Destroy(gameObject);
         }
     }
 }

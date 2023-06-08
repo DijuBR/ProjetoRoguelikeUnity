@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5713024513279042287}
   - component: {fileID: 5713024513279042284}
   - component: {fileID: 4969752892792417181}
+  - component: {fileID: 5146417450610326861}
   m_Layer: 0
   m_Name: InimigoPerseguidor
   m_TagString: Inimigo
@@ -119,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.113852024}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.77229595}
   m_EdgeRadius: 0
 --- !u!114 &4969752892792417181
 MonoBehaviour:
@@ -144,5 +145,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b9c9aa70f85724e9f76d75385a9646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 4010360680732094360, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+  Player: {fileID: 0}
   speed: 2
+--- !u!114 &5146417450610326861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713024513279042285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaInimigo: 20

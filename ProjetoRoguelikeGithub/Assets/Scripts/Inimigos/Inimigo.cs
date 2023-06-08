@@ -9,7 +9,6 @@ public class Inimigo : MonoBehaviour
     public float moveX;
     public float moveY;
     private Rigidbody2D rbInimigo;
-    public int vidainimigo;
     //public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
@@ -21,11 +20,7 @@ public class Inimigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 movement = new Vector2(moveX, moveY);
-        rbInimigo.MovePosition(rbInimigo.position + new Vector2(moveX, moveY));
-
-        DanoInimigo();
-        
+        InimigoMovement();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -45,15 +40,15 @@ public class Inimigo : MonoBehaviour
         }
 
     }
-
-    public void DanoInimigo()
+    void InimigoMovement()
     {
-        
-        
-        //vida inimigo
-        if (vidainimigo <= 0)
-        {
-            Destroy(gameObject);
-        }
+        Vector2 movement = new Vector2(moveX, moveY);
+        rbInimigo.MovePosition(rbInimigo.position + new Vector2(moveX, moveY));
     }
+    
+
+    
+    
+
+    
 }
