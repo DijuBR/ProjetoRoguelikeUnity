@@ -7,13 +7,18 @@ public class RotacaoArma : MonoBehaviour
     public Camera mainCam;
     public Transform pontoRot;
     float rotx;
+    float numN;
+    float num;
     
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         pontoRot = GameObject.FindGameObjectWithTag("PontoRot").GetComponent<Transform>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        numN = -1;
+        num = 1;
+
     }
 
     // Update is called once per frame
@@ -25,7 +30,12 @@ public class RotacaoArma : MonoBehaviour
 
     void ArmaGirandoPlayer()
     {
+        
         Vector3 playerPosition = pontoRot.position;
+        Vector3 eixoYN = transform.localScale;
+        Vector3 eixoY = transform.localScale;
+        eixoY.y = num;
+        eixoYN.y = numN;
         Vector2 rotx = new Vector3(-180, 0);
         Vector3 playerScreenPos = mainCam.WorldToScreenPoint(playerPosition);
         Vector3 mousePos = Input.mousePosition;
@@ -33,25 +43,33 @@ public class RotacaoArma : MonoBehaviour
         Vector3 rotation = mousePos - playerScreenPos;
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        if(rotZ <= 90)
-        {
-            transform.eulerAngles = new Vector2(-180, 0);
-        }
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
-        /*if (transform.rotation.z < 90 && transform.rotation.z > -90)
-        {
-            Debug.Log("LADO DIREITO");
-            transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
+
+        if(rotZ == -90 || rotZ >= -89 && rotZ <= 88|| rotZ == 89)
+        {
+            transform.localScale = eixoY;
         }
-        if (transform.rotation.z > 90 && transform.rotation.z < -90)
+
+
+
+        if(rotZ == 90 || rotZ >= 91 && rotZ <= 179 || rotZ == -91)
         {
-            Debug.Log("LADO ESQUERDO");
-            transform.rotation = Quaternion.Euler(-180, 0, rotZ);
-        }*/
-        
+            transform.localScale = eixoYN;
+        }
 
         
+        /*if(rotZ >= 90 && rotZ <= 180 || rotZ >= -180 && rotZ <= -90)
+        {
+            transform.localScale = eixoY;
+        }
+        if(rotZ <= 90 && rotZ >= 0 || rotZ <= 0 && rotZ >= -90)
+        {
+            transform.localScale = -eixoY;
+        }
+        {
+            
+        }*/
 
     }
 }
