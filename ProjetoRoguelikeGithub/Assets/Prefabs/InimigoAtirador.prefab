@@ -125,6 +125,7 @@ MonoBehaviour:
   Voador: 0
   Atirando: 0
   dist: 10
+  delayTiroIni: 1
 --- !u!61 &1226869240895135626
 BoxCollider2D:
   m_ObjectHideFlags: 0

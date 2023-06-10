@@ -6,7 +6,6 @@ using UnityEngine.XR;
 public class TiroArmaPlayer : MonoBehaviour
 {
     public int dano;
-    public float delayTiro;
     public float velTiro;
     public float quantidadeTiro;
     public float disTiro;
@@ -46,8 +45,4 @@ public class TiroArmaPlayer : MonoBehaviour
                 col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
         }
     }
-    
-
-
-
 }

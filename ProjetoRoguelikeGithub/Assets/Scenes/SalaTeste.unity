@@ -372,10 +372,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1296106290, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296106290, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296106290, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296106290, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296106290, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296106290, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296106290, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1296106293, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1296106293, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078481579, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078481579, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078481579, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2078481580, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: mainCam
       value: 
@@ -734,7 +778,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -807,18 +850,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1129342554
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,6 +2702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InimigoAtirador
       objectReference: {fileID: 0}
+    - target: {fileID: 1226869240895135631, guid: e82edebe7633f9d458c8ad3041fd87bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e82edebe7633f9d458c8ad3041fd87bb, type: 3}
 --- !u!1001 &4584944976518148291
@@ -2731,6 +2766,10 @@ PrefabInstance:
     - target: {fileID: 4584944978266029439, guid: 34187fd675ea244428e48ac1549cef99, type: 3}
       propertyPath: m_Name
       value: PaiVoador
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584944978266029439, guid: 34187fd675ea244428e48ac1549cef99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34187fd675ea244428e48ac1549cef99, type: 3}
@@ -2793,6 +2832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InimigoPerseguidor
       objectReference: {fileID: 0}
+    - target: {fileID: 5713024513279042285, guid: 9079762cdfb09774790a73695ba624b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9079762cdfb09774790a73695ba624b1, type: 3}
 --- !u!1001 &7945763068515682078
@@ -2849,6 +2892,10 @@ PrefabInstance:
     - target: {fileID: 7945763069804572664, guid: 6f38ac7bc65bd174bb7af8f3bfbfb782, type: 3}
       propertyPath: m_Name
       value: Inimigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945763069804572664, guid: 6f38ac7bc65bd174bb7af8f3bfbfb782, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f38ac7bc65bd174bb7af8f3bfbfb782, type: 3}

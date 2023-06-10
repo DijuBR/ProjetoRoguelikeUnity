@@ -8,6 +8,11 @@ public class Arma : MonoBehaviour
     public GameObject tiroPlayer;
     public Transform tiroPlayerPos;
     public Transform arma;
+
+    
+    public float delayTiro;
+    private float tiroCD = 0.0f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +31,11 @@ public class Arma : MonoBehaviour
 
     void AtirarPlayer()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time > tiroCD)
         {
-            Debug.Log("ATIRANDO");
+
+            tiroCD = Time.time + delayTiro;
             Instantiate(tiroPlayer, tiroPlayerPos.position, Quaternion.identity);
         }
-    }
-    void CompararInimigo()
-    {
-
     }
 }

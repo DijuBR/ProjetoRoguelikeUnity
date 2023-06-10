@@ -13,23 +13,13 @@ public class TiroInimigo : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-
-        Vector3 dir = player.transform.position - transform.position;
-        rb.velocity = new Vector2(dir.x, dir.y).normalized * force;
-
-        float rot = Mathf.Atan2(-dir.y, -dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0 ,rot);
+        MovimentoDoTiro();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        
-        if(timer > 6)
-        {
-            Destroy(gameObject);
-        }
+        TiroDestruir();
     }
     
     void OnTriggerEnter2D(Collider2D other)
@@ -38,6 +28,23 @@ public class TiroInimigo : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameObject.Find("PlayerTeste").GetComponent<PlayerMovement>().Dano();
+        }
+    }
+    void MovimentoDoTiro()
+    {
+        Vector3 dir = player.transform.position - transform.position;
+        rb.velocity = new Vector2(dir.x, dir.y).normalized * force;
+
+        float rot = Mathf.Atan2(-dir.y, -dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot);
+    }
+    void TiroDestruir()
+    {
+        timer += Time.deltaTime;
+
+        if (timer > 6)
+        {
+            Destroy(gameObject);
         }
     }
 }

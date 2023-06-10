@@ -13,6 +13,9 @@ public class AtirarInimigo : MonoBehaviour
     public float dist;
     private float timer;
     private GameObject player;
+
+    public float delayTiroIni;
+    private float tiroInimCD = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,37 +30,29 @@ public class AtirarInimigo : MonoBehaviour
     }
     void Atirar()
     {
-        Instantiate(Tiro, TiroPos.position, Quaternion.identity);
+        if (Time.time > tiroInimCD)
+        {
+            tiroInimCD = Time.time + delayTiroIni;
+            Instantiate(Tiro, TiroPos.position, Quaternion.identity);
+        }
+        
     }
     void CheckDistancia()
     {
-        timer += Time.deltaTime;
-        float distancia = Vector2.Distance(transform.position, player.transform.position);
+        float distancia = Vector2.Distance(transform.position, player.transform.position); 
 
-        if (distancia < dist)
+        if(distancia < dist)
         {
-            timer += Time.deltaTime;
-            if (timer > 2)
-            {
-                timer = 0;
-                Atirar();
-            }
-
+            Atirar();
         }
     }
     void CheckDistanciaVoador()
     {
-        timer += Time.deltaTime;
+        
         float distancia = Vector2.Distance(transform.position, player.transform.position);
             if(distancia > dist)
             {
-                timer += Time.deltaTime;
-                if (timer > 2)
-                {
-                    timer = 0;
-                    Atirar();
-                }
-
+                Atirar();
             }
         
        

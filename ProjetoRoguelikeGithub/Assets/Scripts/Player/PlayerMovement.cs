@@ -37,61 +37,27 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-private void Update()
-{
- Horizontal = Input.GetAxisRaw("Horizontal");
-
- if (Input.GetButtonDown("Jump") && noChao())
- {
-    rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
-
- }
- if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
- {
-    rb.velocity = new Vector2(rb.velocity.x , rb.velocity.y * 0.5f);
- }
-
-  Virar();
-
-}
-
-private void FixedUpdate()
-{
-
-        if (KBcontador <= 0)
-        {
-            rb.velocity = new Vector2(Horizontal * VelPlayer, rb.velocity.y);
-        }
-        else
-        {
-            if (KBlado == true)
-            {
-                rb.velocity = new Vector2(-KBforce, KBforce);
-            }
-            if (KBlado == false)
-            {
-                rb.velocity = new Vector2(KBforce, KBforce);
-            }
-
-            KBcontador -= Time.deltaTime;
-        }
-        
-}
-
-private void Virar() //Virar o Player
-{
-    if (virDireita && Horizontal < 0f || virDireita && Horizontal > 0f)
+    private void Update()
     {
+        MovimentacaoDoPlayer();
+        Virar();
+
+    }
+    private void Virar() //Virar o Player
+    {
+        if (virDireita && Horizontal < 0f || virDireita && Horizontal > 0f)
+        {
         virDireita = !virDireita;
         Vector3 localScale = transform.localScale;
         localScale.x = -1f;
         transform.localScale = localScale;
+        }
     }
-}
-private bool noChao()
-{
+
+    private bool noChao()
+    {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-}
+    }
 
     private void OnCollisionEnter2D(Collision2D col2)
     {
@@ -129,6 +95,7 @@ private bool noChao()
             Debug.Log("Morreu");
         }
     }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("ObjectDano"))
@@ -141,7 +108,23 @@ private bool noChao()
             rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
         }
     }
-
     
+    public void MovimentacaoDoPlayer()
+    {
+        Horizontal = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(Horizontal * VelPlayer, rb.velocity.y);
+
+        if (Input.GetButtonDown("Jump") && noChao())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
+
+        }
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+    }
+
 }
 
