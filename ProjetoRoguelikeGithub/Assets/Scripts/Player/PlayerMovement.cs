@@ -15,22 +15,13 @@ public class PlayerMovement : MonoBehaviour
     public float VelPlayer; 
     public float forcaPulo;
     private bool virDireita;
-    public int vida = 3;
+    public int vida;
+    public int numCora;
 
-    public float KBforce;
-    public float KBcontador;
-    public float KBTempototal;
-    public bool KBlado;
-
-
-
-    [SerializeField] Image vidaOn3;
-    [SerializeField] Image vidaOff3;
-
-    [SerializeField] Image vidaOn2;
-    [SerializeField] Image vidaOff2;
-
-
+    public Image[] coracao;
+    public Sprite fullCora;
+    public Sprite halfCora;
+    public Sprite emptyCora;
 
 
     [SerializeField] private Rigidbody2D rb;
@@ -72,27 +63,27 @@ public class PlayerMovement : MonoBehaviour
     {
         vida -= 1;
 
-        if (vida == 2)
+        for (int i = 0; i < coracao.Length; i++)
         {
-            vidaOff3.enabled = true;
-            vidaOn3.enabled = false;
-            vidaOn2.enabled = true;
-            vidaOff2.enabled = false;
             
-
-        }
-        if (vida == 1)
-        {
-            vidaOff3.enabled = true;
-            vidaOn3.enabled = false;
-            vidaOn2.enabled = false;
-            vidaOff2.enabled = true;
-
-        }
-
-        if (vida < 1)
-        {
-            Debug.Log("Morreu");
+            if(i < vida)
+            {
+                coracao[i].sprite = fullCora;
+            }
+            else
+            {
+                coracao[i].sprite = emptyCora;
+            }
+            
+            
+            if(i < numCora)
+            {
+                coracao[i].enabled = true;
+            }
+            else
+            {
+                coracao[i].enabled = false;
+            }
         }
     }
 
