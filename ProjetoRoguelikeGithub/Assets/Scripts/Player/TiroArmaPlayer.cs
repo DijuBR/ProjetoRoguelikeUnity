@@ -11,18 +11,18 @@ public class TiroArmaPlayer : MonoBehaviour
     public float disTiro;
     public VidaInimigo VidaInimigo;
 
-    public GameObject inimigoAtual;
 
     public Rigidbody2D rb;
     public GameObject inimigo;
     private Transform tiroPlayerPos;
     
-
+    
 
     
     // Start is called before the first frame update
     void Start()
     {
+        dano = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().dano;
         tiroPlayerPos = GameObject.FindGameObjectWithTag("TiroPlayerPos").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         inimigo = GameObject.FindGameObjectWithTag("Inimigo");
@@ -31,17 +31,12 @@ public class TiroArmaPlayer : MonoBehaviour
        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Inimigo")
         {
                 Destroy(this.gameObject);
+                Debug.Log(dano);
                 col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
         }
     }

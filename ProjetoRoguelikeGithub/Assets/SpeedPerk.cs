@@ -11,7 +11,7 @@ public class SpeedPerk : PowerUpEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<PlayerMovement>().VelPlayer += quant;
+        target.GetComponent<PlayerMovement>().velPlayer += quant;
 
     }
 }

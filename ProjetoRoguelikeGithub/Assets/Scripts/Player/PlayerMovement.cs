@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     //Um dos projetos já feitos
 
     private float Horizontal; 
-    public float VelPlayer; 
+    public float velPlayer;
     public float forcaPulo;
     private bool virDireita;
     public int vida;
@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    private void Start()
+    {
+        velPlayer = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer;
+    }
     private void Update()
     {
         MovimentacaoDoPlayer();
@@ -103,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
     public void MovimentacaoDoPlayer()
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(Horizontal * VelPlayer, rb.velocity.y);
+        rb.velocity = new Vector2(Horizontal * velPlayer, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && noChao())
         {

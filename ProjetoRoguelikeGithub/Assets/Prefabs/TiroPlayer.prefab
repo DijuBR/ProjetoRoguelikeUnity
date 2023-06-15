@@ -145,9 +145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 5
-  delayTiro: 0
   velTiro: 10
   quantidadeTiro: 0
   disTiro: 0
+  VidaInimigo: {fileID: 0}
   rb: {fileID: 0}
   inimigo: {fileID: 0}
