@@ -131,7 +131,7 @@ MonoBehaviour:
   tiroPlayer: {fileID: 7403304441912072969, guid: 43b1c89419063614db4f5440f8541a1a, type: 3}
   tiroPlayerPos: {fileID: 1164485387}
   arma: {fileID: 0}
-  delayTiro: 0.7
+  delayTiro: 0
 --- !u!114 &1296106293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,17 +312,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd7a46c2bde3eb4796af535500743a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VelPlayer: 12
+  velPlayer: 0
   forcaPulo: 8
   vida: 3
-  KBforce: 100
-  KBcontador: 0
-  KBTempototal: 0.2
-  KBlado: 0
-  vidaOn3: {fileID: 0}
-  vidaOff3: {fileID: 0}
-  vidaOn2: {fileID: 0}
-  vidaOff2: {fileID: 0}
+  numCora: 0
+  coracao: []
+  fullCora: {fileID: 0}
+  halfCora: {fileID: 0}
+  emptyCora: {fileID: 0}
   rb: {fileID: 4010360680732094361}
   groundCheck: {fileID: 4010360682318673933}
   groundLayer:

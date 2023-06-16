@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     //Variavéis para movimentação do player, tudo que for PUBLIC altere o valor na Unity!
     //Não mude nada, por favor.
     //Um dos projetos já feitos
-
-    private float Horizontal; 
+    private float Horizontal;
+    
     public float velPlayer;
     public float forcaPulo;
+
     private bool virDireita;
+
     public int vida;
     public int numCora;
 
@@ -30,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        forcaPulo = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo;
         velPlayer = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer;
     }
     private void Update()

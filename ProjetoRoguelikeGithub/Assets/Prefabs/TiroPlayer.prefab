@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 5
-  velTiro: 10
+  velTiro: 0
   quantidadeTiro: 0
   disTiro: 0
   VidaInimigo: {fileID: 0}

@@ -683,6 +683,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2a06962618ab7dd4e95c8e09b4564943, type: 3}
     - target: {fileID: 4010360680732094364, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: forcaPulo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010360680732094364, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: Coracao.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -2887,10 +2891,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 10
-  velTiro: 0
+  velTiro: 6
   quantidadeTiro: 0
-  disTiro: 0
+  disTiro: 0.7
   velPlayer: 7
+  forcPulo: 7
+  fireRate: 2
 --- !u!1 &1807862005
 GameObject:
   m_ObjectHideFlags: 0

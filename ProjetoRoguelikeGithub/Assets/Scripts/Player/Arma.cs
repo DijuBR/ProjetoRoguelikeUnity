@@ -18,8 +18,9 @@ public class Arma : MonoBehaviour
     {
         inimigo = GameObject.FindGameObjectWithTag("Inimigo");
         arma = GameObject.FindGameObjectWithTag("Arma").GetComponent<Transform>();
+        delayTiro = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().fireRate;
 
-       
+
     }
 
     // Update is called once per frame

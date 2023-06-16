@@ -8,5 +8,8 @@ public class PlayerStatus : MonoBehaviour
     public float velTiro;
     public float quantidadeTiro;
     public float disTiro;
+
     public float velPlayer;
+    public float forcPulo;
+    public float fireRate;
 }
