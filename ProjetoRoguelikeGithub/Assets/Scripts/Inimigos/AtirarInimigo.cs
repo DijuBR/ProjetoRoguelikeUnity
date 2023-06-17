@@ -19,7 +19,7 @@ public class AtirarInimigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        Settings();
     }
 
     // Update is called once per frame
@@ -56,5 +56,10 @@ public class AtirarInimigo : MonoBehaviour
             }
         
        
+    }
+
+    void Settings()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 }

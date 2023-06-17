@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class InimigoSeguidor : MonoBehaviour
 {
-    public GameObject Player;
+    public Transform player;
     public float speed;
     private float distancia;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Settings();
     }
 
     // Update is called once per frame
@@ -24,8 +24,12 @@ public class InimigoSeguidor : MonoBehaviour
 
     void Movimento()
     {
-        distancia = Vector2.Distance(transform.position, Player.transform.position);
-        Vector2 direction = Player.transform.position - transform.position;
-        transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
+        distancia = Vector2.Distance(transform.position, player.transform.position);
+        Vector2 direction = player.transform.position - transform.position;
+        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+    }
+    void Settings()
+    {
+        player = GameObject.Find("PlayerTeste").GetComponent<Transform>();
     }
 }
