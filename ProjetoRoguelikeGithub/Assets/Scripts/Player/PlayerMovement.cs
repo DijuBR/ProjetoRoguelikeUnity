@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using JetBrains.Annotations;
+using System.Threading;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,15 +17,19 @@ public class PlayerMovement : MonoBehaviour
     public float velPlayer;
     public float forcaPulo;
 
-    private bool virDireita;
+    private bool virDireita = true;
+    
 
-    public int vida;
-    public int numCora;
+    public double vida;
+    public double numCora;
 
     public Image[] coracao;
     public Sprite fullCora;
     public Sprite halfCora;
     public Sprite emptyCora;
+
+    float num = 1.75f;
+    double num2 = -1.75;
 
 
     [SerializeField] private Rigidbody2D rb;
@@ -34,22 +40,29 @@ public class PlayerMovement : MonoBehaviour
     {
         forcaPulo = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo;
         velPlayer = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer;
+        vida = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida;
+        numCora = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora;
+
+        numCora = vida;
     }
+    
     private void Update()
     {
         MovimentacaoDoPlayer();
+        CoracoesCheck();
         Virar();
-
     }
+    
     private void Virar() //Virar o Player
     {
-        if (virDireita && Horizontal < 0f || virDireita && Horizontal > 0f)
-        {
-        virDireita = !virDireita;
-        Vector3 localScale = transform.localScale;
-        localScale.x = -1f;
-        transform.localScale = localScale;
-        }
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        
+        
+
+
+        
     }
 
     private bool noChao()
@@ -68,22 +81,34 @@ public class PlayerMovement : MonoBehaviour
 
     public void Dano()
     {
-        vida -= 1;
+        vida -= 0.5;
+    }
 
-        for (int i = 0; i < coracao.Length; i++)
+    public void CoracoesCheck()
+    {
+        if(vida > numCora)
         {
-            
+            numCora = vida;
+        }
+        
+        for(int i = 0; i < coracao.Length; i++)
+        {
             if(i < vida)
             {
                 coracao[i].sprite = fullCora;
+
+                if(vida == i + 0.5)
+                {
+                    coracao[i].sprite = halfCora;
+                }
             }
             else
             {
                 coracao[i].sprite = emptyCora;
             }
-            
-            
-            if(i < numCora)
+
+
+            if (i < numCora)
             {
                 coracao[i].enabled = true;
             }
@@ -92,6 +117,8 @@ public class PlayerMovement : MonoBehaviour
                 coracao[i].enabled = false;
             }
         }
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -122,7 +149,10 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
+
     }
+
+    
 
 }
 
