@@ -13,7 +13,10 @@ public class PlayerMovement : MonoBehaviour
     //Não mude nada, por favor.
     //Um dos projetos já feitos
     private float Horizontal;
-    
+    private Camera mainCam;
+    private Transform playerTransform;
+    Vector2 mousePos;
+
     public float velPlayer;
     public float forcaPulo;
 
@@ -42,27 +45,32 @@ public class PlayerMovement : MonoBehaviour
         velPlayer = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer;
         vida = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida;
         numCora = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora;
-
+        mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         numCora = vida;
+        playerTransform = GetComponent<Transform>();
+        int num = 1;
     }
     
-    private void Update()
+    public void Update()
     {
         MovimentacaoDoPlayer();
         CoracoesCheck();
         Virar();
+        
     }
     
     private void Virar() //Virar o Player
     {
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-        
-        
-
-
-        
+        Vector3 worldMousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log(worldMousePos);
+        if (worldMousePos.x > transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (worldMousePos.x < transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 
     private bool noChao()
