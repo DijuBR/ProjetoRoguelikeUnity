@@ -16,7 +16,6 @@ public class VidaPlayer : MonoBehaviour
     private void Start()
     {
         vida = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida;
-        numCora = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora;
         numCora = vida;
     }
 
@@ -32,8 +31,6 @@ public class VidaPlayer : MonoBehaviour
     {
         vida -= 0.5;
     }
-
-
 
     private void Update()
     {
