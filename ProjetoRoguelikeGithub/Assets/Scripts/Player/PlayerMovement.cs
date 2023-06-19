@@ -17,15 +17,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool virDireita;
 
-    public int vida;
-    public int numCora;
-
-    public Image[] coracao;
-    public Sprite fullCora;
-    public Sprite halfCora;
-    public Sprite emptyCora;
-
-
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -55,43 +46,6 @@ public class PlayerMovement : MonoBehaviour
     private bool noChao()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
-    private void OnCollisionEnter2D(Collision2D col2)
-    {
-
-        if (col2.gameObject.CompareTag("Inimigo"))
-        {
-            Dano();
-        }
-    }
-
-    public void Dano()
-    {
-        vida -= 1;
-
-        for (int i = 0; i < coracao.Length; i++)
-        {
-            
-            if(i < vida)
-            {
-                coracao[i].sprite = fullCora;
-            }
-            else
-            {
-                coracao[i].sprite = emptyCora;
-            }
-            
-            
-            if(i < numCora)
-            {
-                coracao[i].enabled = true;
-            }
-            else
-            {
-                coracao[i].enabled = false;
-            }
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)

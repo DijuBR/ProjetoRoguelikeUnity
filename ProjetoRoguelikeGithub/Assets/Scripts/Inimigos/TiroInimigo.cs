@@ -27,7 +27,7 @@ public class TiroInimigo : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            GameObject.Find("PlayerTeste").GetComponent<PlayerMovement>().Dano();
+            GameObject.Find("PlayerTeste").GetComponent<VidaPlayer>().Dano();
         }
     }
     void MovimentoDoTiro()
