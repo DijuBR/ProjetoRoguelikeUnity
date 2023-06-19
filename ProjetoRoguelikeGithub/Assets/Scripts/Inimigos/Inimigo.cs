@@ -8,13 +8,13 @@ public class Inimigo : MonoBehaviour
 {
     public float moveX;
     public float moveY;
-    private Rigidbody2D rbInimigo;
-    //public SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        rbInimigo = GetComponent<Rigidbody2D>();
+        Settings();
     }
 
     // Update is called once per frame
@@ -43,12 +43,11 @@ public class Inimigo : MonoBehaviour
     void InimigoMovement()
     {
         Vector2 movement = new Vector2(moveX, moveY);
-        rbInimigo.MovePosition(rbInimigo.position + new Vector2(moveX, moveY));
+        rb.MovePosition(rb.position + new Vector2(moveX, moveY));
     }
-    
 
-    
-    
-
-    
+    void Settings()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    } 
 }

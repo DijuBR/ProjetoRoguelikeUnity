@@ -53,23 +53,10 @@ public class RotacaoArma : MonoBehaviour
 
 
 
-        if(rotZ == 90 || rotZ >= 91 && rotZ <= 179 || rotZ == -91)
+        if(rotZ == 90 || rotZ >= 91 && rotZ <= 179 || rotZ == -91 || rotZ == -180 || rotZ >= -179 && rotZ <= -92)
         {
             transform.localScale = eixoYN;
         }
-
-        
-        /*if(rotZ >= 90 && rotZ <= 180 || rotZ >= -180 && rotZ <= -90)
-        {
-            transform.localScale = eixoY;
-        }
-        if(rotZ <= 90 && rotZ >= 0 || rotZ <= 0 && rotZ >= -90)
-        {
-            transform.localScale = -eixoY;
-        }
-        {
-            
-        }*/
 
     }
 }

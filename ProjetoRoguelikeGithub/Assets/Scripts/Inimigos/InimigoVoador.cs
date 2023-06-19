@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class InimigoVoador : MonoBehaviour
 {
-    public Transform player;
-    public Transform pontoInicial;
+    private Transform player;
+    private Transform pontoInicial;
     public float vel;
     public MonoBehaviour voadorAtirando;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Settings();
     }
 
     // Update is called once per frame
@@ -35,5 +35,12 @@ public class InimigoVoador : MonoBehaviour
             voadorAtirando.enabled = true;
 
         }
+    }
+
+    void Settings()
+    {
+        player = GameObject.Find("PlayerTeste").GetComponent<Transform>();
+        pontoInicial = GameObject.Find("StartPoint").GetComponent<Transform>();
+        voadorAtirando = GetComponent<AtirarInimigo>();
     }
 }
