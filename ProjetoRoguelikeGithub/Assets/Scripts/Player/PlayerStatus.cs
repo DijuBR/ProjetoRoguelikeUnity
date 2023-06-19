@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerStatus : MonoBehaviour
 {
     public float vida;
-    public double numCora;
-    public int   dano;
+    public float numCora;
+    public int dano;
     public float velTiro;
     public float quantidadeTiro;
     public float disTiro;

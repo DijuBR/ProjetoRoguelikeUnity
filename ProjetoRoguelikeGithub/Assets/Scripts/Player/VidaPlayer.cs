@@ -5,14 +5,20 @@ using UnityEngine.UI;
 
 public class VidaPlayer : MonoBehaviour
 {
-    public int vida;
-    public int numCora;
+    public double vida;
+    public double numCora;
 
     public Image[] coracao;
     public Sprite fullCora;
     public Sprite halfCora;
     public Sprite emptyCora;
 
+    private void Start()
+    {
+        vida = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida;
+        numCora = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora;
+        numCora = vida;
+    }
 
     private void OnCollisionEnter2D(Collision2D col2)
     {
@@ -22,22 +28,35 @@ public class VidaPlayer : MonoBehaviour
             Dano();
         }
     }
-
-
     public void Dano()
     {
-        vida -= 1;
+        vida -= 0.5;
+    }
+
+
+
+    private void Update()
+    {
+        CoracoesCheck();
+    }
+
+    public void CoracoesCheck()
+    {
+        if (vida > numCora)
+        {
+            numCora = vida;
+        }
 
         for (int i = 0; i < coracao.Length; i++)
         {
-
-            if (vida == 1 || vida == 2 || vida == 3 || vida == 4 || vida == 5 || vida == 6)
+            if (i < vida)
             {
                 coracao[i].sprite = fullCora;
-            }
-            else if (vida == 0.5 || vida == 1.5 || vida == 2.5 || vida == 3.5 || vida == 4.5 || vida == 5.5)
-            {
-                coracao[i].sprite = halfCora;
+
+                if (vida == i + 0.5)
+                {
+                    coracao[i].sprite = halfCora;
+                }
             }
             else
             {
@@ -54,5 +73,7 @@ public class VidaPlayer : MonoBehaviour
                 coracao[i].enabled = false;
             }
         }
+
+
     }
 }

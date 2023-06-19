@@ -22,14 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool virDireita = true;
 
-
     public double vida;
-    public double numCora;
-
-    public Image[] coracao;
-    public Sprite fullCora;
-    public Sprite halfCora;
-    public Sprite emptyCora;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -39,19 +32,14 @@ public class PlayerMovement : MonoBehaviour
     {
         forcaPulo = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo;
         velPlayer = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer;
-        vida = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida;
-        numCora = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora;
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
-        numCora = vida;
         playerTransform = GetComponent<Transform>();
     }
 
     public void Update()
     {
         MovimentacaoDoPlayer();
-        CoracoesCheck();
         Virar();
-
     }
 
     private void Virar() //Virar o Player
@@ -72,56 +60,9 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void OnCollisionEnter2D(Collision2D col2)
-    {
-
-        if (col2.gameObject.CompareTag("Inimigo"))
-        {
-            Dano();
-        }
-    }
-
-    public void Dano()
-    {
-        vida -= 0.5;
-    }
-
-    public void CoracoesCheck()
-    {
-        if (vida > numCora)
-        {
-            numCora = vida;
-        }
-
-        for (int i = 0; i < coracao.Length; i++)
-        {
-            if (i < vida)
-            {
-                coracao[i].sprite = fullCora;
-
-                if (vida == i + 0.5)
-                {
-                    coracao[i].sprite = halfCora;
-                }
-            }
-            else
-            {
-                coracao[i].sprite = emptyCora;
-            }
+    
 
 
-            if (i < numCora)
-            {
-                coracao[i].enabled = true;
-            }
-            else
-            {
-                coracao[i].enabled = false;
-            }
-        }
-
-
-    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
