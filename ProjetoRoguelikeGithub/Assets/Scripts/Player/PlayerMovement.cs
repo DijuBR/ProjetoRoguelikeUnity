@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using JetBrains.Annotations;
+using System.Threading;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,11 +13,23 @@ public class PlayerMovement : MonoBehaviour
     //Não mude nada, por favor.
     //Um dos projetos já feitos
     private float Horizontal;
-    
+    private Camera mainCam;
+    private Transform playerTransform;
+    Vector2 mousePos;
+
     public float velPlayer;
     public float forcaPulo;
 
-    private bool virDireita;
+    private bool virDireita = true;
+
+
+    public double vida;
+    public double numCora;
+
+    public Image[] coracao;
+    public Sprite fullCora;
+    public Sprite halfCora;
+    public Sprite emptyCora;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -25,27 +39,88 @@ public class PlayerMovement : MonoBehaviour
     {
         forcaPulo = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo;
         velPlayer = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer;
+        vida = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida;
+        numCora = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora;
+        mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        numCora = vida;
+        playerTransform = GetComponent<Transform>();
     }
-    private void Update()
+
+    public void Update()
     {
         MovimentacaoDoPlayer();
+        CoracoesCheck();
         Virar();
 
     }
+
     private void Virar() //Virar o Player
     {
-        if (virDireita && Horizontal < 0f || virDireita && Horizontal > 0f)
+        Vector3 worldMousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        if (worldMousePos.x > transform.position.x)
         {
-        virDireita = !virDireita;
-        Vector3 localScale = transform.localScale;
-        localScale.x = -1f;
-        transform.localScale = localScale;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (worldMousePos.x < transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 
     private bool noChao()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col2)
+    {
+
+        if (col2.gameObject.CompareTag("Inimigo"))
+        {
+            Dano();
+        }
+    }
+
+    public void Dano()
+    {
+        vida -= 0.5;
+    }
+
+    public void CoracoesCheck()
+    {
+        if (vida > numCora)
+        {
+            numCora = vida;
+        }
+
+        for (int i = 0; i < coracao.Length; i++)
+        {
+            if (i < vida)
+            {
+                coracao[i].sprite = fullCora;
+
+                if (vida == i + 0.5)
+                {
+                    coracao[i].sprite = halfCora;
+                }
+            }
+            else
+            {
+                coracao[i].sprite = emptyCora;
+            }
+
+
+            if (i < numCora)
+            {
+                coracao[i].enabled = true;
+            }
+            else
+            {
+                coracao[i].enabled = false;
+            }
+        }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -60,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
         }
     }
-    
+
     public void MovimentacaoDoPlayer()
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
@@ -76,7 +151,10 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
+
     }
+
+
 
 }
 
