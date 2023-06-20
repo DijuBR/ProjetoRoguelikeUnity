@@ -11,7 +11,7 @@ public class HpPerk : PowerUpEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<VidaPlayer>().vida += quant;
+        target.GetComponent<PlayerStatus>().vida += quant;
         
     }
 }

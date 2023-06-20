@@ -33,8 +33,6 @@ public class VidaPlayer : MonoBehaviour
         vida -= 0.5;
     }
 
-
-
     private void Update()
     {
         CoracoesCheck();
