@@ -159,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &219953122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766fcd10a3127224fbea8376e38541a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpEffect: {fileID: 11400000, guid: a8604ca1bc0d9b945a6ad88d02bc5088, type: 2}
+  powerUpEffect: {fileID: 11400000, guid: 3f6850ab5fca98947aeaf65d90b07ea2, type: 2}
 --- !u!61 &219953123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2910,7 +2910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3626ae69850cc64ab84ea5409184c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 3
+  vida: 5
   numCora: 3
   dano: 10
   velTiro: 6
@@ -2931,8 +2931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a298b7385dc023845953b3a99e659ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 3
-  numCora: 3
+  vida: 0
+  numCora: 0
   coracao:
   - {fileID: 331029843}
   - {fileID: 1094583672}
@@ -3139,7 +3139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226869240895135631, guid: e82edebe7633f9d458c8ad3041fd87bb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e82edebe7633f9d458c8ad3041fd87bb, type: 3}
