@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da15e11c8a64e6046b40ff5118369db0
+guid: 9bdf1874d408b834ba51c32fb2e4815e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -862300575115105455
-    second: LifeCard_0
+      213: -7635323028573187703
+    second: TiroSprite_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LifeCard_0
+      name: TiroSprite_0
       rect:
         serializedVersion: 2
         x: 0
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15b26a2123e7804f0800000000000000
-      internalID: -862300575115105455
+      spriteID: 9811980c822e90690800000000000000
+      internalID: -7635323028573187703
       vertices: []
       indices: 
       edges: []
