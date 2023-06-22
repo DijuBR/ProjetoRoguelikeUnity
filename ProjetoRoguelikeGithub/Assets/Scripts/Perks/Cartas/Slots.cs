@@ -4,19 +4,61 @@ using UnityEngine;
 
 public class Slots : MonoBehaviour
 {
-    private RectTransform pos;
+    private RectTransform pos1;
+    private RectTransform pos2;
+    private RectTransform pos3;
     [SerializeField] private GameObject[] cartas;
     // Start is called before the first frame update
     void Start()
     {
-        pos = GetComponent<RectTransform>();
-        int r = Random.Range(0, cartas.Length);
-        Instantiate(cartas[r], pos);
+        pos1 = GameObject.Find("Slot 1").GetComponent<RectTransform>();
+        pos2 = GameObject.Find("Slot 2").GetComponent<RectTransform>();
+        pos3 = GameObject.Find("Slot 3").GetComponent<RectTransform>();
+        //GerarCartas1();
+        //GerarCartas2();
+        //GerarCartas3();
+        GerarCartasFull();
     }
 
-    // Update is called once per frame
-    void Update()
+    void GerarCartasFull()
     {
-        
+        //Aplicando as cartas do array para os randoms
+        int r1 = Random.Range(0, cartas.Length);
+        int r2 = Random.Range(0, cartas.Length);
+        int r3 = Random.Range(0, cartas.Length);
+
+        Instantiate(cartas[r1], pos1);
+        while(r2 == r1)
+        {
+            r2 = Random.Range(0, cartas.Length);
+        }
+        Instantiate(cartas[r2], pos2);
+        while(r3 == r2 || r3 == r1)
+        {
+            r3 = Random.Range(0, cartas.Length);
+        }
+        Instantiate(cartas[r3], pos3);
     }
+
+   /* void GerarCartas1()
+    { 
+            r1 = Random.Range(0, cartas.Length);   
+            Instantiate(cartas[r1], pos1);
+    }
+    void GerarCartas2()
+    {
+            while (r2 == r1)
+            {
+                r2 = Random.Range(0, cartas.Length);
+            }
+            Instantiate(cartas[r2], pos2);
+    }
+    void GerarCartas3()
+    {        
+        while (r3 == r2 && r3 == r1)
+        {
+            r3 = Random.Range(0, cartas.Length);
+        }
+        Instantiate(cartas[r3], pos3);
+    }*/
 }
