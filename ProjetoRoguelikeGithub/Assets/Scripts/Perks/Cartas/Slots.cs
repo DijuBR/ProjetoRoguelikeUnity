@@ -14,19 +14,17 @@ public class Slots : MonoBehaviour
         pos1 = GameObject.Find("Slot 1").GetComponent<RectTransform>();
         pos2 = GameObject.Find("Slot 2").GetComponent<RectTransform>();
         pos3 = GameObject.Find("Slot 3").GetComponent<RectTransform>();
-        //GerarCartas1();
-        //GerarCartas2();
-        //GerarCartas3();
         GerarCartasFull();
     }
 
     void GerarCartasFull()
     {
-        //Aplicando as cartas do array para os randoms
+        //Escolhendo as cartas dentro do array de cartas
         int r1 = Random.Range(0, cartas.Length);
         int r2 = Random.Range(0, cartas.Length);
         int r3 = Random.Range(0, cartas.Length);
 
+        //Instancia a carta do primeiro slot
         Instantiate(cartas[r1], pos1);
         while(r2 == r1)
         {
@@ -39,26 +37,4 @@ public class Slots : MonoBehaviour
         }
         Instantiate(cartas[r3], pos3);
     }
-
-   /* void GerarCartas1()
-    { 
-            r1 = Random.Range(0, cartas.Length);   
-            Instantiate(cartas[r1], pos1);
-    }
-    void GerarCartas2()
-    {
-            while (r2 == r1)
-            {
-                r2 = Random.Range(0, cartas.Length);
-            }
-            Instantiate(cartas[r2], pos2);
-    }
-    void GerarCartas3()
-    {        
-        while (r3 == r2 && r3 == r1)
-        {
-            r3 = Random.Range(0, cartas.Length);
-        }
-        Instantiate(cartas[r3], pos3);
-    }*/
 }
