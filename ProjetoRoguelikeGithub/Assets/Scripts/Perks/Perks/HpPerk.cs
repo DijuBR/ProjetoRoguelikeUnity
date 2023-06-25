@@ -7,11 +7,14 @@ using UnityEngine;
 public class HpPerk : PowerUpEffect
 {
     public int quant;
+    public GameObject player;
 
 
-    public override void Apply(GameObject target)
+    public override void Apply()
     {
-        target.GetComponent<PlayerStatus>().vida += quant;
-        
+        player = GameObject.Find("PlayerTeste");
+        player.GetComponent<PlayerStatus>();
+        player.GetComponent<PlayerStatus>().vida += quant;
+
     }
 }

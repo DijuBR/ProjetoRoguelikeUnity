@@ -7,7 +7,7 @@ public class Slots : MonoBehaviour
     private RectTransform pos1;
     private RectTransform pos2;
     private RectTransform pos3;
-    [SerializeField] private GameObject[] cartas;
+    [SerializeField] public GameObject[] cartas;
     // Start is called before the first frame update
     void Start()
     {

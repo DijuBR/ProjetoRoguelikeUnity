@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class ControleBotao : MonoBehaviour
+public class ControleBotao : Perk
 {
-    public PowerUpEffect powerupeffect;
-    public void AplicarPerk()
+    public GameObject pai;
+    public PlayerStatus status;
+    public void PerkApply()
     {
-        Destroy(gameObject);
-        //powerupeffect.Apply(gameObject);
+        AplicarPerk();
+        Invoke("Delay", 0.5f);
     }
 
-    
+    private void Update()
+    {
+        powerUpEffect = pai.GetComponentInChildren<Perk>().powerUpEffect;
+    }
 
-
-
+    void Delay()
+    {
+        SceneManager.LoadScene("SalaTeste");
+    }
 }

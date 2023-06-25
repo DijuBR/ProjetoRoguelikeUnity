@@ -9,19 +9,12 @@ using System.Threading;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Variavéis para movimentação do player, tudo que for PUBLIC altere o valor na Unity!
-    //Não mude nada, por favor.
-    //Um dos projetos já feitos
     private float Horizontal;
     private Camera mainCam;
     private Transform playerTransform;
-    Vector2 mousePos;
-
+    
     public float velPlayer;
     public float forcaPulo;
-
-    private bool virDireita = true;
-
     public double vida;
 
     [SerializeField] private Rigidbody2D rb;
@@ -30,14 +23,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        forcaPulo = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo;
-        velPlayer = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer;
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         playerTransform = GetComponent<Transform>();
     }
 
     public void Update()
     {
+        forcaPulo = PlayerPrefs.GetFloat("FORCPULO");
+        velPlayer = PlayerPrefs.GetFloat("VELPLAYER");
         MovimentacaoDoPlayer();
         Virar();
     }
@@ -59,10 +52,6 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
-
-    
-
-
 
     private void OnTriggerEnter2D(Collider2D col)
     {

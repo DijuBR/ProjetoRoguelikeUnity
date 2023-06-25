@@ -7,11 +7,15 @@ using UnityEngine;
 public class SpeedPerk : PowerUpEffect
 {
     public int quant;
+    private PlayerStatus status;
+    private GameObject player;
 
 
-    public override void Apply(GameObject target)
+    public override void Apply()
     {
-        target.GetComponent<PlayerMovement>().velPlayer += quant;
+        player = GameObject.Find("PlayerTeste");
+        player.GetComponent<PlayerStatus>();
+        player.GetComponent<PlayerStatus>().velPlayer += quant;
 
     }
 }
