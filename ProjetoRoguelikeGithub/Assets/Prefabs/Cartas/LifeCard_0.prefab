@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2228187567225066089}
   - component: {fileID: 2228187567225066094}
+  - component: {fileID: 3569446817701400394}
   m_Layer: 0
   m_Name: LifeCard_0
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3569446817701400394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2228187567225066088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766fcd10a3127224fbea8376e38541a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpEffect: {fileID: 11400000, guid: d715610a6821efb41a5d0e1c4ecf7879, type: 2}

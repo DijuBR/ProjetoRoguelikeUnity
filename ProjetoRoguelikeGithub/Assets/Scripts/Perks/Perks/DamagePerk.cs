@@ -8,11 +8,15 @@ public class DamagePerk : PowerUpEffect
 {
 
     public int quant;
-    
-    
+    public GameObject player;
+    public PlayerStatus status;
 
-    public override void Apply(GameObject target)
+
+    public override void Apply()
     {
-        target.GetComponent<PlayerStatus>().dano += quant;
+        player = GameObject.Find("PlayerTeste");
+        player.GetComponent<PlayerStatus>();
+        player.GetComponent<PlayerStatus>().dano += quant;
+        
     }
 }

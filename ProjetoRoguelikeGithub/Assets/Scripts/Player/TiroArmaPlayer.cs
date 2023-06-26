@@ -35,6 +35,7 @@ public class TiroArmaPlayer : MonoBehaviour
     }
     private void Update()
     {
+         dano = PlayerPrefs.GetInt("DANO");
         Destroy(this.gameObject, disTiro);
     }
 
