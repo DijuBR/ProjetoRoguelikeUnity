@@ -45,7 +45,7 @@ public class PlayerStatus : MonoBehaviour
         Resetar();
     }
 
-    private void Resetar()
+    public void Resetar()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
