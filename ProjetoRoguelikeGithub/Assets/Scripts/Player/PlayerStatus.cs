@@ -55,7 +55,7 @@ public class PlayerStatus : MonoBehaviour
             GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().dano = 5;
             GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velTiro = 3;
             GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().disTiro = 0.7f;
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().fireRate = 0.75f;
+            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().fireRate = 1.7f;
 
             GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida = 3;
             GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora = 3;
