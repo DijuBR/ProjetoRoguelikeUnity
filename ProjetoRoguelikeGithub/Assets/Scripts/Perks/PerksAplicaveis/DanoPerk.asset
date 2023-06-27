@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ee7b36c470839428fc9cb78ac97ffb, type: 3}
   m_Name: DanoPerk
   m_EditorClassIdentifier: 
-  quant: 50
+  quant: 3
+  player: {fileID: 0}
+  status: {fileID: 0}

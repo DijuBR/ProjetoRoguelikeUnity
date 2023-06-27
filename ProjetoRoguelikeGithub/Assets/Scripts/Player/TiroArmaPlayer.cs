@@ -36,6 +36,7 @@ public class TiroArmaPlayer : MonoBehaviour
     private void Update()
     {
          dano = PlayerPrefs.GetInt("DANO");
+        velTiro = PlayerPrefs.GetFloat("VELTIRO");
         Destroy(this.gameObject, disTiro);
     }
 

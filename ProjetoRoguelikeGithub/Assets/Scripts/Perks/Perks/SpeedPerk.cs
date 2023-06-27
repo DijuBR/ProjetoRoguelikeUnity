@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SpeedPerk : PowerUpEffect
 {
-    public int quant;
+    public float quant;
     private PlayerStatus status;
     private GameObject player;
 

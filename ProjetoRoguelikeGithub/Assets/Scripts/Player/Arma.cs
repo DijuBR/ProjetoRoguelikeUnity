@@ -26,6 +26,7 @@ public class Arma : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        delayTiro = PlayerPrefs.GetFloat("FIRERATE");
         AtirarPlayer();
        
     }
