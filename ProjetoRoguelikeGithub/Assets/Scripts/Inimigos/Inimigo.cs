@@ -42,8 +42,8 @@ public class Inimigo : MonoBehaviour
     }
     void InimigoMovement()
     {
-        Vector2 movement = new Vector2(moveX, moveY);
-        rb.MovePosition(rb.position + new Vector2(moveX, moveY));
+        Vector2 movement = new Vector2(moveX, 0f);
+        rb.MovePosition(rb.position + new Vector2(moveX, 0f));
     }
 
     void Settings()
