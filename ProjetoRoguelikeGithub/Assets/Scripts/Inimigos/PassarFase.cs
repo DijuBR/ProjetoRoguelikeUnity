@@ -19,10 +19,7 @@ public class PassarFase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(inimigomorto >= 1)
-        //{
-        //    Portal.SetActive(true);
-        //}
+        
 
         if (GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos == 0)
         {
