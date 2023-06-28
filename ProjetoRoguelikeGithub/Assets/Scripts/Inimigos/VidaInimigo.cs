@@ -21,6 +21,8 @@ public class VidaInimigo : MonoBehaviour
     {
         if (vidaInimigo <= 0)
         {
+            //GameObject.Find("BG").GetComponent<PassarFase>().inimigomorto++;
+            GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos -= 1;
             Debug.Log("Morto Inimigo");
             Destroy(gameObject);
         }

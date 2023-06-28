@@ -7,9 +7,12 @@ public class EnemySpawn : MonoBehaviour
 
     public GameObject[] enemyPrefabs;
     public Transform pos;
+    public int inimigosnascidos;
+
     void Spawn()
     {
         int randomEnemy = Random.Range(0, enemyPrefabs.Length);
+        inimigosnascidos = randomEnemy - 1;
         Instantiate(enemyPrefabs[randomEnemy],
             new Vector3(Random.Range(pos.position.x - 2f, pos.position.x + 2f),
             Random.Range(pos.position.y - 2f, pos.position.y + 2f), 0),
