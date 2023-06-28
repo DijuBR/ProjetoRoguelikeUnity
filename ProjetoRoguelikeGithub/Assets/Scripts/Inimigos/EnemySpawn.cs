@@ -12,7 +12,6 @@ public class EnemySpawn : MonoBehaviour
     void Spawn()
     {
         int randomEnemy = Random.Range(0, enemyPrefabs.Length);
-        inimigosnascidos = randomEnemy - 1;
         Instantiate(enemyPrefabs[randomEnemy],
             new Vector3(Random.Range(pos.position.x - 2f, pos.position.x + 2f),
             Random.Range(pos.position.y - 2f, pos.position.y + 2f), 0),
@@ -20,13 +19,14 @@ public class EnemySpawn : MonoBehaviour
     }
     private void Start()
     {
-        int spawn = Random.Range(1,6);
+        int spawn = Random.Range(3,11);
         int spawnMax = 0;
 
         while(spawnMax != spawn)
         {
             spawnMax++;
             Spawn();
+            inimigosnascidos = spawnMax;
             Debug.Log(spawnMax);
         }
     }

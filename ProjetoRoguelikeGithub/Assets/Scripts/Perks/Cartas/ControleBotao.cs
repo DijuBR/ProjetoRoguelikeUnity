@@ -21,6 +21,6 @@ public class ControleBotao : Perk
 
     void Delay()
     {
-        SceneManager.LoadScene("SalaTeste");
+        SceneManager.LoadScene("SalaJogavel1");
     }
 }

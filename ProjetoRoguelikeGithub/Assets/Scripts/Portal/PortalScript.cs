@@ -5,27 +5,19 @@ using UnityEngine;
 public class PortalScript : MonoBehaviour
 {
     public GameObject texto;
-    public BoxCollider2D colliderP;
-    private bool inimigosTela;
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.CompareTag("Inimigo") == false)
-        {
-            texto.SetActive(true);
-                
-        }
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        texto.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos == 0)
+        {
+            texto.SetActive(true);
+        }
     }
 }
