@@ -8,6 +8,7 @@ public class TelaInicial : MonoBehaviour
     // Start is called before the first frame update
     public void Play()
     {
+        GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
         SceneManager.LoadScene("SalaJogavel1");
         
     }
@@ -16,6 +17,7 @@ public class TelaInicial : MonoBehaviour
     public void ExitGame()
     {
         print("Saiu");
+        GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
         Application.Quit();
     }
 }

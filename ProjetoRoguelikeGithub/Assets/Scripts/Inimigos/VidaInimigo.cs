@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class VidaInimigo : MonoBehaviour
 {
-    public int vidaInimigo;
+    public float vidaInimigo;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         DanoInimigo();

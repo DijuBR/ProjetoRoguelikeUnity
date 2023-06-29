@@ -5,7 +5,7 @@ using UnityEngine.XR;
 
 public class TiroArmaPlayer : MonoBehaviour
 {
-    public int dano;
+    public float dano;
     public float velTiro;
     public float quantidadeTiro;
     public float disTiro;
@@ -35,7 +35,7 @@ public class TiroArmaPlayer : MonoBehaviour
     }
     private void Update()
     {
-         dano = PlayerPrefs.GetInt("DANO");
+         dano = PlayerPrefs.GetFloat("DANO");
         velTiro = PlayerPrefs.GetFloat("VELTIRO");
         Destroy(this.gameObject, disTiro);
     }

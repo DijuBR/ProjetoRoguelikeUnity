@@ -19,6 +19,7 @@ public class InimigoVoador : MonoBehaviour
     void Update()
     {
         Movimentar();
+        Flipar();
     }
 
     void Movimentar()
@@ -42,5 +43,17 @@ public class InimigoVoador : MonoBehaviour
         player = GameObject.Find("PlayerTeste").GetComponent<Transform>();
         pontoInicial = GameObject.Find("StartPoint").GetComponent<Transform>();
         voadorAtirando = GetComponent<AtirarInimigo>();
+    }
+
+    void Flipar()
+    {
+        if (transform.position.x < player.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (transform.position.x > player.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 }

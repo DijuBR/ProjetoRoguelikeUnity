@@ -19,7 +19,7 @@ public class EnemySpawn : MonoBehaviour
     }
     private void Start()
     {
-        int spawn = Random.Range(3,11);
+        int spawn = Random.Range(3,8);
         int spawnMax = 0;
 
         while(spawnMax != spawn)

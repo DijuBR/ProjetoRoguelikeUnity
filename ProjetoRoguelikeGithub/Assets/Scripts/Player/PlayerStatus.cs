@@ -8,7 +8,7 @@ public class PlayerStatus : MonoBehaviour
     public float vida;              //Vida
     public float numCora;           //Número de corações
     //Tiro
-    public int   dano;              //Dano
+    public float   dano;              //Dano
     public float velTiro;           //Velocidade da bala
     public float disTiro;           //Distância máxima da bala
     public float fireRate;          //Velocidade que atira
@@ -20,7 +20,7 @@ public class PlayerStatus : MonoBehaviour
     {
         
         velPlayer = PlayerPrefs.GetFloat("VELPLAYER");
-        dano = PlayerPrefs.GetInt("DANO");
+        dano = PlayerPrefs.GetFloat("DANO");
         vida = PlayerPrefs.GetFloat("VIDA");
         numCora = PlayerPrefs.GetFloat("NUMCORA");
         velTiro = PlayerPrefs.GetFloat("VELTIRO");
@@ -35,31 +35,37 @@ public class PlayerStatus : MonoBehaviour
         PlayerPrefs.SetFloat("VIDA", vida);
         PlayerPrefs.SetFloat("NUMCORA", numCora);
         //ARMA
-        PlayerPrefs.SetInt("DANO", dano);
+        PlayerPrefs.SetFloat("DANO", dano);
         PlayerPrefs.SetFloat("VELTIRO", velTiro);
         PlayerPrefs.SetFloat("DISTIRO", disTiro);
         PlayerPrefs.SetFloat("FIRERATE", fireRate);
         //Movimentação
         PlayerPrefs.SetFloat("VELPLAYER", velPlayer);
         PlayerPrefs.SetFloat("FORCPULO", forcPulo);
-        Resetar();
     }
 
     public void Resetar()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer = 7;
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo = 7;
+        velPlayer = 5;
+        forcPulo = 7;
 
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().dano = 5;
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velTiro = 3;
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().disTiro = 0.7f;
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().fireRate = 1.7f;
+        dano = 5;
+        velTiro = 3;
+        disTiro = 1f;
+        fireRate = 1.25f;
 
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida = 3;
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora = 3;
-        }
+        vida = 3;
+        numCora = 3;
+        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer = 7;
+        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo = 7;
+
+        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().dano = 5;
+        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velTiro = 3;
+        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().disTiro = 0.7f;
+        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().fireRate = 1.7f;
+
+        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida = 3;
+        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora = 3;
     }
 
 }

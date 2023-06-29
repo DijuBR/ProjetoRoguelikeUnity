@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VidaPlayer : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class VidaPlayer : MonoBehaviour
     private void Update()
     {
         CoracoesCheck();
+        Morreu();
     }
 
     public void CoracoesCheck()
@@ -72,5 +74,13 @@ public class VidaPlayer : MonoBehaviour
         }
 
 
+    }
+
+    void Morreu()
+    {
+        if(vida <= 0)
+        {
+            SceneManager.LoadScene("MenuGameOver");
+        }
     }
 }

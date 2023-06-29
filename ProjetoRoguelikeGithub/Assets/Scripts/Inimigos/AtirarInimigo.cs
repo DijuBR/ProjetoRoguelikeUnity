@@ -27,6 +27,7 @@ public class AtirarInimigo : MonoBehaviour
     {
         CheckDistancia();
         CheckDistanciaVoador();
+        Flipar();
     }
     void Atirar()
     {
@@ -61,5 +62,17 @@ public class AtirarInimigo : MonoBehaviour
     void Settings()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    void Flipar()
+    {
+        if (transform.position.x < player.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (transform.position.x > player.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 }

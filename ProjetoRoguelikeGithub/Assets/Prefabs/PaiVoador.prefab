@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430836b51c1e9aa4793278aa83051850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 2
+  vel: 1.75
   voadorAtirando: {fileID: 1284881113698848661}
 --- !u!114 &1284881113698848661
 MonoBehaviour:
@@ -118,7 +118,7 @@ MonoBehaviour:
   TiroPos: {fileID: 8174946772862981485}
   Voador: 1
   Atirando: 0
-  dist: 10
+  dist: 20
   delayTiroIni: 1.5
 --- !u!61 &1622550154710276642
 BoxCollider2D:
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaInimigo: 15
+  vidaInimigo: 40
 --- !u!50 &6791009251606006148
 Rigidbody2D:
   serializedVersion: 4

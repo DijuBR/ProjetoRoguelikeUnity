@@ -107,7 +107,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &1226869240895135630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   Voador: 0
   Atirando: 0
   dist: 10
-  delayTiroIni: 1
+  delayTiroIni: 1.75
 --- !u!61 &1226869240895135626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaInimigo: 20
+  vidaInimigo: 35
 --- !u!1 &1226869242465282700
 GameObject:
   m_ObjectHideFlags: 0

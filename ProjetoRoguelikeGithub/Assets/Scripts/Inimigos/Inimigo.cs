@@ -31,11 +31,11 @@ public class Inimigo : MonoBehaviour
 
         if(pontoAtual == pontoB.transform)
         {
-            rb.velocity = new Vector2(moveX, 0.5f);
+            rb.velocity = new Vector2(moveX, transform.position.y);
         }
         else
         {
-            rb.velocity = new Vector2(-moveX, 0.5f);
+            rb.velocity = new Vector2(-moveX, transform.position.y);
         }
 
         if (Vector2.Distance(transform.position, pontoAtual.position) < 0.5f && pontoAtual == pontoB.transform)

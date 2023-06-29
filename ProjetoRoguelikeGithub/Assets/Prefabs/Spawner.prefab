@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 7945763069804572664, guid: 6f38ac7bc65bd174bb7af8f3bfbfb782, type: 3}
   - {fileID: 1226869240895135631, guid: e82edebe7633f9d458c8ad3041fd87bb, type: 3}
   - {fileID: 5713024513279042285, guid: 9079762cdfb09774790a73695ba624b1, type: 3}
   - {fileID: 4584944978266029439, guid: 34187fd675ea244428e48ac1549cef99, type: 3}
   pos: {fileID: 4583812490533802494}
+  inimigosnascidos: 0

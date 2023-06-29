@@ -18,6 +18,15 @@ public class InimigoSeguidor : MonoBehaviour
     void Update()
     {
         Movimento();
+
+        if(transform.position.x < player.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (transform.position.x > player.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 
 
