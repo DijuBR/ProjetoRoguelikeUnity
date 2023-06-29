@@ -13,6 +13,7 @@ public class MenuGameOver : MonoBehaviour
     public void Reiniciar()
     {
         GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
+        SceneManager.LoadScene("salaJogavel1");
     }
 
     public void Menu()

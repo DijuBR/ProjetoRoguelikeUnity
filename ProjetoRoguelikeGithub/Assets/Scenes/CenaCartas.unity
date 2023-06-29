@@ -633,6 +633,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1473505362856048832, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4010360680732094360, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: m_Name
       value: PlayerTeste
@@ -747,6 +751,7 @@ GameObject:
   - component: {fileID: 1831383570}
   - component: {fileID: 1831383573}
   - component: {fileID: 1831383572}
+  - component: {fileID: 1831383574}
   m_Layer: 5
   m_Name: Slot 2 Button
   m_TagString: Untagged
@@ -883,6 +888,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1831383574}
+        m_TargetAssemblyTypeName: cenaManagement, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1831383574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831383568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca95181abc81dd34a875f574627b70d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1877603525
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +960,7 @@ GameObject:
   - component: {fileID: 1888219284}
   - component: {fileID: 1888219286}
   - component: {fileID: 1888219287}
+  - component: {fileID: 1888219288}
   m_Layer: 5
   m_Name: Slot 3 Button
   m_TagString: Untagged
@@ -1052,6 +1082,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1888219288}
+        m_TargetAssemblyTypeName: cenaManagement, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1888219287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,6 +1109,18 @@ MonoBehaviour:
   powerUpEffect: {fileID: 0}
   pai: {fileID: 1877603525}
   status: {fileID: 0}
+--- !u!114 &1888219288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888219282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca95181abc81dd34a875f574627b70d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031225907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1134,7 @@ GameObject:
   - component: {fileID: 2031225909}
   - component: {fileID: 2031225912}
   - component: {fileID: 2031225911}
+  - component: {fileID: 2031225913}
   m_Layer: 5
   m_Name: Slot 1 Button
   m_TagString: Untagged
@@ -1216,6 +1271,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2031225913}
+        m_TargetAssemblyTypeName: cenaManagement, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2031225913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031225907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca95181abc81dd34a875f574627b70d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2057048916
 GameObject:
   m_ObjectHideFlags: 0

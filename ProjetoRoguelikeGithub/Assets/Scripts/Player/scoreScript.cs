@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class scoreScript : MonoBehaviour
 {
-    public TextMeshProUGUI textoScore;
+    public TextMeshPro textoScore;
     public int pontuacao;
 
     // Start is called before the first frame update

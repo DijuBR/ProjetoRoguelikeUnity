@@ -19,7 +19,7 @@ public class PortalScript : MonoBehaviour
         if (GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos == 0)
         {
             texto.SetActive(true);
-            
+
         }
     }
 }

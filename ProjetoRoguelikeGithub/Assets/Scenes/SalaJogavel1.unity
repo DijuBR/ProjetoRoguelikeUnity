@@ -792,25 +792,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 21, y: 1.0113363}
   m_EdgeRadius: 0
---- !u!1 &201166445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010360680732094360, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
-  m_PrefabInstance: {fileID: 594035104}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &201166453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201166445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87605258c8f50af4cb3c28f796256e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoScore: {fileID: 0}
-  pontuacao: 0
 --- !u!1 &284897956
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,31 +926,35 @@ PrefabInstance:
     - target: {fileID: 1670767695, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: coracao.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1102355407}
     - target: {fileID: 1670767695, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: coracao.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 376940169}
     - target: {fileID: 1670767695, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: coracao.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1677558896}
     - target: {fileID: 1670767695, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: coracao.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 853120345}
     - target: {fileID: 1670767695, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: coracao.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 721477377}
     - target: {fileID: 1670767695, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: coracao.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1190458139}
     - target: {fileID: 2078481580, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1473505362856048832, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: textoScore
+      value: 
+      objectReference: {fileID: 880460621}
     - target: {fileID: 4010360680732094360, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: m_Name
       value: PlayerTeste
@@ -1030,6 +1015,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4898582878060919622, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 737119177}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
 --- !u!1001 &630434261
@@ -1261,6 +1250,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721477375}
   m_CullTransparentMesh: 1
+--- !u!1 &737119177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2322356077538777366, guid: 2e1cead660d66a44199dba591a3f8448, type: 3}
+  m_PrefabInstance: {fileID: 880460619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &853120343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1444,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2322356077538777367, guid: 2e1cead660d66a44199dba591a3f8448, type: 3}
   m_PrefabInstance: {fileID: 880460619}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &880460621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2322356077538777364, guid: 2e1cead660d66a44199dba591a3f8448, type: 3}
+  m_PrefabInstance: {fileID: 880460619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737119177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,11 +2490,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!1 &1614698971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7277589582083021921, guid: daa11c474ee4c0d4abdfb7d4988e88b8, type: 3}
-  m_PrefabInstance: {fileID: 1660657007}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1660657007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2626,36 +2626,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677558894}
   m_CullTransparentMesh: 1
---- !u!1 &1949907467 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2123556150009625159, guid: daa11c474ee4c0d4abdfb7d4988e88b8, type: 3}
-  m_PrefabInstance: {fileID: 1660657007}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1949907468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949907467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8870428f2c277e8439a0cb9961a9a272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1949907471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949907467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 254df3efcce805f4bbbf303ac367aa97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texto: {fileID: 1614698971}
 --- !u!1 &2024312639
 GameObject:
   m_ObjectHideFlags: 0

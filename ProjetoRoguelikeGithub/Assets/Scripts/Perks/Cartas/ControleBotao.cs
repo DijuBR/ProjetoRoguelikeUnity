@@ -12,16 +12,10 @@ public class ControleBotao : Perk
     public void PerkApply()
     {
         AplicarPerk();
-        Invoke("Delay", 0.5f);
     }
 
     private void Update()
     {
         powerUpEffect = pai.GetComponentInChildren<Perk>().powerUpEffect;
-    }
-
-    void Delay()
-    {
-        SceneManager.LoadScene("SalaJogavel1");
     }
 }
