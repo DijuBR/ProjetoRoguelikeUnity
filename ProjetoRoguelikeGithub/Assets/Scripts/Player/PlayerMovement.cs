@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float velPlayer;
     public float forcaPulo;
     public double vida;
-    private int pulos = 1;
+    private int pulos = 0;
 
     private void Start()
     {
@@ -56,8 +56,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+    }
 
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.collider.CompareTag("ChaoTileMap"))
+        {
+            pulos = 1;
+            Debug.Log("Pode Pular" + pulos);
+        }
     }
 
 
