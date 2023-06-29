@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7945763069804572661}
   - component: {fileID: 7945763069804572660}
   - component: {fileID: 7945763069804572663}
-  - component: {fileID: 7945763069804572662}
   - component: {fileID: 7945763069804572665}
   - component: {fileID: 7981659748345994834}
+  - component: {fileID: 7311294263054044665}
   m_Layer: 0
   m_Name: Inimigo
   m_TagString: Inimigo
@@ -107,32 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &7945763069804572662
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7945763069804572664}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00066518784, y: -0.030245781}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.546875, y: 0.734375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.54744625, y: 0.67222977}
-  m_EdgeRadius: 0
 --- !u!114 &7945763069804572665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba0cd034b236ef4597761f52bacc697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveX: 0.05
-  moveY: 0
+  moveX: 6
+  pontoA: {fileID: 3534170827817010045, guid: 7b068074a5a25a74885352f123d78aef, type: 3}
+  pontoB: {fileID: 1359181988714453761, guid: 65d831d4bc47af04cb9e30ffc3153644, type: 3}
 --- !u!114 &7981659748345994834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +135,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaInimigo: 15
+--- !u!70 &7311294263054044665
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945763069804572664}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.546875, y: 0.734375}
+  m_Direction: 0
