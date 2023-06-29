@@ -56,10 +56,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-        if (Input.GetButtonUp("Down") && rb.velocity.y > 0f)
-        {
-            Debug.Log("SEXO");
-        }
+        
     }
 
 

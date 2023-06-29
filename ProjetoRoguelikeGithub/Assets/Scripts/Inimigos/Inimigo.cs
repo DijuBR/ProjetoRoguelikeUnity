@@ -31,11 +31,11 @@ public class Inimigo : MonoBehaviour
 
         if(pontoAtual == pontoB.transform)
         {
-            rb.velocity = new Vector2(moveX, transform.position.y);
+            rb.velocity = new Vector2(moveX, 0.5f);
         }
         else
         {
-            rb.velocity = new Vector2(-moveX, transform.position.y);
+            rb.velocity = new Vector2(-moveX, 0.5f);
         }
 
         if (Vector2.Distance(transform.position, pontoAtual.position) < 0.5f && pontoAtual == pontoB.transform)
@@ -57,34 +57,4 @@ public class Inimigo : MonoBehaviour
         localScale.x *= -1;
         transform.localScale = localScale;
     }
-
-
-
-
-
-    //private void OnCollisionEnter2D(Collision2D col)
-    //{
-    //    if (col.gameObject.CompareTag("BarreiraX"))
-    //    {
-    //        moveX = moveX * -1;
-    //        moveY = moveX;
-    //        //transform.eulerAngles = new Vector2(0, 180);
-    //        transform.Rotate(0, 180, 0);
-    //    }
-
-    //    if (col.gameObject.CompareTag("BarreiraY"))
-    //    {
-    //        //transform.eulerAngles = new Vector2(0, -180);
-    //        moveX = moveX * -1;
-    //        moveY = moveX;
-    //        transform.Rotate(0, 180, 0);
-    //    }
-
-    //}
-
-    //void InimigoMovement()
-    //{
-    //    Vector2 movement = new Vector2(moveX, moveY);
-    //    rb.MovePosition(new Vector2(moveX, moveY));
-    //}
 }
