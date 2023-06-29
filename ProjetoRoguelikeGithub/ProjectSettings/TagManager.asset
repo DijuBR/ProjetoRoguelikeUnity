@@ -12,6 +12,7 @@ TagManager:
   - Arma
   - TiroPlayerPos
   - TiroPlayer
+  - ChaoTileMap
   layers:
   - Default
   - TransparentFX

@@ -1128,6 +1128,10 @@ PrefabInstance:
       value: PlayerTeste
       objectReference: {fileID: 0}
     - target: {fileID: 4010360680732094361, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010360680732094361, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
@@ -1814,7 +1818,7 @@ GameObject:
   - component: {fileID: 1223604694}
   m_Layer: 6
   m_Name: TilemapChao
-  m_TagString: Untagged
+  m_TagString: ChaoTileMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
