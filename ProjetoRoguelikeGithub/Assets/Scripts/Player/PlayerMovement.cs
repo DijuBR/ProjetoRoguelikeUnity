@@ -1,30 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using JetBrains.Annotations;
-using System.Threading;
 
 public class PlayerMovement : MonoBehaviour
 {
     private float Horizontal;
     private Camera mainCam;
     private Transform playerTransform;
+    private Rigidbody2D rb;
     
     public float velPlayer;
     public float forcaPulo;
     public double vida;
-
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
+    private int pulos = 1;
 
     private void Start()
     {
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         playerTransform = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void Update()
@@ -47,32 +41,14 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
-
-    private bool noChao()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("ObjectDano"))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
-        }
-
-        if (col.CompareTag("Inimigo"))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
-        }
-    }
-
     public void MovimentacaoDoPlayer()
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(Horizontal * velPlayer, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && noChao())
+        if (Input.GetButtonDown("Jump") && pulos > 0)
         {
+            pulos--;
             rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
 
         }
