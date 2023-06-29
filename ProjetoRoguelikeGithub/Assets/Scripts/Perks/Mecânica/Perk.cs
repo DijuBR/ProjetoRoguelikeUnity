@@ -20,5 +20,6 @@ public class Perk : MonoBehaviour
     public void AplicarPerk()
     {
         powerUpEffect.Apply();
+
     }
 }

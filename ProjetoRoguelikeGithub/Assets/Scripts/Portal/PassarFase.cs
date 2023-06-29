@@ -10,7 +10,7 @@ public class PassarFase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class PassarFase : MonoBehaviour
         if (col.CompareTag("Player") && concluido == true)
         {
             SceneManager.LoadScene("CenaCartas");
+            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
         }
     }
 

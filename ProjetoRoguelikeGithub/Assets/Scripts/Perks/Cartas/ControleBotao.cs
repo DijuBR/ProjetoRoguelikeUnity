@@ -8,6 +8,7 @@ public class ControleBotao : Perk
 {
     public GameObject pai;
     public PlayerStatus status;
+
     public void PerkApply()
     {
         AplicarPerk();
