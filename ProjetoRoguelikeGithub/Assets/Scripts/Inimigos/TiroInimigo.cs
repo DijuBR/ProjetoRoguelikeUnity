@@ -29,6 +29,10 @@ public class TiroInimigo : MonoBehaviour
             Destroy(this.gameObject);
             GameObject.Find("PlayerTeste").GetComponent<VidaPlayer>().Dano();
         }
+        if (other.gameObject.CompareTag("ChaoTileMap"))
+        {
+            Destroy(this.gameObject);
+        }
     }
     void MovimentoDoTiro()
     {

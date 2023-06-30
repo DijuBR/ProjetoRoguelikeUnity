@@ -48,6 +48,10 @@ public class TiroArmaPlayer : MonoBehaviour
                 Debug.Log(dano);
                 col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
         }
+        if (col.gameObject.CompareTag("ChaoTileMap"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     

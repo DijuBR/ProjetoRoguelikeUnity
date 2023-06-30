@@ -20,6 +20,7 @@ public class InimigoVoador : MonoBehaviour
     {
         Movimentar();
         Flipar();
+
     }
 
     void Movimentar()

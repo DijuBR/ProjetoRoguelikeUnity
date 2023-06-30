@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 public class scoreScript : MonoBehaviour
 {
-    public TextMeshPro textoScore;
     public int pontuacao;
+    public TextMeshPro texto;
 
-    // Start is called before the first frame update
     private void Start()
     {
-        pontuacao = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao;
+        texto = GetComponent<TextMeshPro>();
     }
 
     void Update()
     {
-        textoScore.text = "Score: " + pontuacao;
+        pontuacao = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao;
+        texto.text =  "Score: " + pontuacao.ToString();
     }
 }

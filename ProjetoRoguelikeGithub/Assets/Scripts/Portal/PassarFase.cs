@@ -27,7 +27,6 @@ public class PassarFase : MonoBehaviour
         if (col.CompareTag("Player") && concluido == true)
         {
             SceneManager.LoadScene("CenaCartas");
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
         }
     }
 

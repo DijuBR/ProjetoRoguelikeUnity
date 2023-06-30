@@ -56,3 +56,9 @@ TagManager:
   - name: Cartas
     uniqueID: 198053423
     locked: 0
+  - name: Portal
+    uniqueID: 4079567611
+    locked: 0
+  - name: New Layer
+    uniqueID: 2801078895
+    locked: 0
