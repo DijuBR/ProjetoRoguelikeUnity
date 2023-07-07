@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164485386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.212, y: 0.044, z: 0}
+  m_LocalPosition: {x: 0.212, y: 0.067, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1296106290}
@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296106289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.612, y: -0.029999733, z: 0}
+  m_LocalPosition: {x: 0.6120001, y: -0.029999733, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1164485387}
@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 1670767694}
   - component: {fileID: 1670767695}
   - component: {fileID: 1693972771}
+  - component: {fileID: 326542768812680849}
   m_Layer: 0
   m_Name: PlayerTeste
   m_TagString: Player
@@ -316,6 +317,7 @@ MonoBehaviour:
   velPlayer: 0
   forcaPulo: 0
   vida: 0
+  animator: {fileID: 326542768812680849}
 --- !u!114 &1670767694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,3 +379,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.546875, y: 0.671875}
   m_Direction: 0
+--- !u!95 &326542768812680849
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010360680732094360}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e1c6e32531a00a46bed9892ba581bee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

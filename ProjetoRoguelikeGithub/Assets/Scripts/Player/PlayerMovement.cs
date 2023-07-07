@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public double vida;
     private int pulos = 0;
 
+    public Animator animator;
+
     private void Start()
     {
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
@@ -45,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(Horizontal * velPlayer, rb.velocity.y);
+
+        animator.SetFloat("Speed", Mathf.Abs(Horizontal));
 
         if (Input.GetButtonDown("Jump") && pulos > 0)
         {
