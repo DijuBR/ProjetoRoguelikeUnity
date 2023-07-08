@@ -45,6 +45,7 @@ public class TiroArmaPlayer : MonoBehaviour
         if (col.gameObject.tag == "Inimigo")
         {
                 Destroy(this.gameObject);
+                col.GetComponent<FlashDano>().FlashRun();
                 Debug.Log(dano);
                 col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
         }

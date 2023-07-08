@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1226869240895135630}
   - component: {fileID: 1226869240895135626}
   - component: {fileID: 3750479100027346073}
+  - component: {fileID: 3170622093287903728}
   m_Layer: 0
   m_Name: InimigoAtirador
   m_TagString: Inimigo
@@ -167,6 +168,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaInimigo: 35
   vidaIniMax: 0
+--- !u!114 &3170622093287903728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226869240895135631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66db5eb75cf7f3643bd7c2793d41d0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
+  duracao: 0.25
 --- !u!1 &1226869242465282700
 GameObject:
   m_ObjectHideFlags: 0

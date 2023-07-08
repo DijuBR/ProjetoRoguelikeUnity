@@ -30,6 +30,7 @@ public class VidaPlayer : MonoBehaviour
     }
     public void Dano()
     {
+        GetComponent<FlashDano>().FlashRun();
         vida -= 0.5;
     }
 

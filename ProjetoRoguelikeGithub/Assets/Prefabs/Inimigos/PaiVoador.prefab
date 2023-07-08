@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1622550154710276642}
   - component: {fileID: 8588232640485112879}
   - component: {fileID: 6791009251606006148}
+  - component: {fileID: 6554934357431707858}
   m_Layer: 0
   m_Name: EnemyFly
   m_TagString: Inimigo
@@ -182,6 +183,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &6554934357431707858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584944977854431562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66db5eb75cf7f3643bd7c2793d41d0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
+  duracao: 0.25
 --- !u!1 &4584944978266029439
 GameObject:
   m_ObjectHideFlags: 0

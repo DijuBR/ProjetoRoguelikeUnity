@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5713024513279042284}
   - component: {fileID: 4969752892792417181}
   - component: {fileID: 5146417450610326861}
+  - component: {fileID: 1345111410400224064}
   m_Layer: 0
   m_Name: InimigoPerseguidor
   m_TagString: Inimigo
@@ -162,6 +163,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaInimigo: 25
   vidaIniMax: 0
+--- !u!114 &1345111410400224064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713024513279042285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66db5eb75cf7f3643bd7c2793d41d0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
+  duracao: 0.25
 --- !u!1001 &6643993476414346766
 PrefabInstance:
   m_ObjectHideFlags: 0

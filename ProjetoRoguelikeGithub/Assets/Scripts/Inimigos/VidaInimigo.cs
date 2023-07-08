@@ -23,4 +23,5 @@ public class VidaInimigo : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }
