@@ -8,6 +8,8 @@ public class InimigoSeguidor : MonoBehaviour
     public float speed;
     private float distancia;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,8 @@ public class InimigoSeguidor : MonoBehaviour
         distancia = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+        animator.SetFloat("Speed", Mathf.Abs(distancia));
     }
     void Settings()
     {

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1226869240895135626}
   - component: {fileID: 3750479100027346073}
   - component: {fileID: 3170622093287903728}
+  - component: {fileID: 963174069957052215}
   m_Layer: 0
   m_Name: InimigoAtirador
   m_TagString: Inimigo
@@ -182,6 +183,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
   duracao: 0.25
+--- !u!95 &963174069957052215
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226869240895135631}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f17096c2fdc9ac846a492d99abc04af5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1226869242465282700
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +334,10 @@ PrefabInstance:
     - target: {fileID: 6643993476606657275, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643993477033730870, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -361
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}

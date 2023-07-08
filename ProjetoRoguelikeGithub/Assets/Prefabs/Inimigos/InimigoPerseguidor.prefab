@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4969752892792417181}
   - component: {fileID: 5146417450610326861}
   - component: {fileID: 1345111410400224064}
+  - component: {fileID: 7779970455973539953}
   m_Layer: 0
   m_Name: InimigoPerseguidor
   m_TagString: Inimigo
@@ -122,7 +123,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0009279251, y: -0.031055927}
+  m_Offset: {x: 0.0009279251, y: 0.02215004}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -133,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5471859, y: 0.6726389}
+  m_Size: {x: 0.5471859, y: 0.6988735}
   m_EdgeRadius: 0
 --- !u!114 &4969752892792417181
 MonoBehaviour:
@@ -149,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   speed: 2.75
+  animator: {fileID: 7779970455973539953}
 --- !u!114 &5146417450610326861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +179,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
   duracao: 0.25
+--- !u!95 &7779970455973539953
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713024513279042285}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ae05d8736596854992f8effd1d5cf86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6643993476414346766
 PrefabInstance:
   m_ObjectHideFlags: 0

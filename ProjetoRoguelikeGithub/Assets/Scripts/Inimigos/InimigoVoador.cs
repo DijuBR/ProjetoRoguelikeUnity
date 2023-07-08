@@ -9,6 +9,8 @@ public class InimigoVoador : MonoBehaviour
     public float vel;
     public MonoBehaviour voadorAtirando;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,9 @@ public class InimigoVoador : MonoBehaviour
     void Movimentar()
     {
         float distanciaPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        animator.SetFloat("Speed", Mathf.Abs(distanciaPlayer));
+
         if(distanciaPlayer < 10)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, vel * Time.deltaTime);
