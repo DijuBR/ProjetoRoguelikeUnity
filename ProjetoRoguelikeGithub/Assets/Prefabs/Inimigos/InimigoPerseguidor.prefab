@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5146417450610326861}
   - component: {fileID: 1345111410400224064}
   - component: {fileID: 7779970455973539953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: InimigoPerseguidor
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -209,6 +209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasBarraDeVida
       objectReference: {fileID: 0}
+    - target: {fileID: 6643993476501452966, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6643993476501452967, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -293,12 +297,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6643993476606657274, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6643993476606657275, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6643993476606657275, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643993476917266953, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643993477033730873, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643993477416063487, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

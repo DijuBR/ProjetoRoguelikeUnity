@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class VidaPlayer : MonoBehaviour
 {
+    [Header("VIDA")]
     public double vida;
     public double numCora;
 
@@ -13,6 +14,9 @@ public class VidaPlayer : MonoBehaviour
     public Sprite fullCora;
     public Sprite halfCora;
     public Sprite emptyCora;
+    [Header("Frames De Imortalidade")]
+    public bool estaImortal = false;
+    [SerializeField]private float tempoImortal;
 
     private void Start()
     {
@@ -20,19 +24,22 @@ public class VidaPlayer : MonoBehaviour
         numCora = vida;
     }
 
-    private void OnCollisionEnter2D(Collision2D col2)
+    private void OnCollisionStay2D(Collision2D col2)
     {
-        float timer = 3f - Time.deltaTime;
-        if (col2.gameObject.CompareTag("Inimigo") && timer == 0)
-        {
-            Dano();
-            timer = 3f;
-        }
+       if (col2.gameObject.CompareTag("Inimigo"))
+       {
+        Dano();
+       }
     }
     public void Dano()
     {
-        GetComponent<FlashDano>().FlashRun();
-        vida -= 0.5;
+        if(estaImortal == false)
+        {
+            vida -= 0.5;
+            GetComponent<FlashDano>().FlashRun();
+            StartCoroutine("TempImortal");
+        }
+        
     }
 
     private void Update()
@@ -85,4 +92,19 @@ public class VidaPlayer : MonoBehaviour
             SceneManager.LoadScene("MenuGameOver");
         }
     }
+
+    private IEnumerator TempImortal()
+    {
+        estaImortal = true;
+        Debug.Log("Player Imortal: " + estaImortal);
+
+        yield return new WaitForSeconds(tempoImortal);
+
+        estaImortal = false;
+        Debug.Log("Player Imortal: " + estaImortal);
+
+
+
+    }
+    
 }
