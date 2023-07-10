@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
+  - flashMat: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

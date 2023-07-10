@@ -22,10 +22,11 @@ public class VidaPlayer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col2)
     {
-
-        if (col2.gameObject.CompareTag("Inimigo"))
+        float timer = 3f - Time.deltaTime;
+        if (col2.gameObject.CompareTag("Inimigo") && timer == 0)
         {
             Dano();
+            timer = 3f;
         }
     }
     public void Dano()
