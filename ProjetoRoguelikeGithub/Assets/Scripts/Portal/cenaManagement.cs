@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class cenaManagement : MonoBehaviour
 {
 
-    private List<int> cenas = new List<int> { 1, 2, 3 };
+    private List<int> cenas = new List<int> { 1, 2, 3, 4, 5, 6 };
 
     public void NextScene()
     {

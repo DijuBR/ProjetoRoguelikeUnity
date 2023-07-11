@@ -16,7 +16,7 @@ public class PassarFase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos == 0)
+        if(GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos == 0 || GameObject.Find("SpawnerNoite").GetComponent<EnemySpawn>().inimigosnascidos == 0)
         {
             concluido = true;   
         }
