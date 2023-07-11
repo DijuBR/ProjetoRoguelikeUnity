@@ -18,8 +18,15 @@ public class VidaInimigo : MonoBehaviour
     {
         if (vidaInimigo <= 0)
         {
-            GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos -= 1;
-            GameObject.Find("SpawnerNoite").GetComponent<EnemySpawn>().inimigosnascidos -= 1;
+            if(GameObject.Find("Spawner") == true)
+            {
+                GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos -= 1;
+            }
+            else
+            {
+                GameObject.Find("SpawnerNoite").GetComponent<EnemySpawn>().inimigosnascidos -= 1;
+            }
+            
             Debug.Log("Morto Inimigo");
             Destroy(gameObject);
         }

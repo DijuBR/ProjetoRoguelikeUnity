@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 1693972771}
   - component: {fileID: 326542768812680849}
   - component: {fileID: 999822656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerTeste
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -364,6 +364,8 @@ MonoBehaviour:
   fullCora: {fileID: -4201888350839978331, guid: dcafc77113bf30448a00f56756d91e98, type: 3}
   halfCora: {fileID: -3707362112576709864, guid: a2d391dabe6ef7948a0adf5c27aafd06, type: 3}
   emptyCora: {fileID: 6547615354634196092, guid: ba94fbe760dc9be43b11e0e3482d1cca, type: 3}
+  estaImortal: 0
+  tempoImortal: 1.25
 --- !u!70 &1693972771
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -412,4 +414,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
-  duracao: 0.25
+  duracao: 0.2
