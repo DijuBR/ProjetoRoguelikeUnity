@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 80ce9cc55d0250844b5bc36a9f09d902
+guid: 518c1a28f8f6d1447a11e59cf480d553
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -657798905860237986
-    second: BackgroundGameNoiteSpriteSheet_0
+      213: 2517666008471105759
+    second: BackgroundGameNoite_SpriteSheet_0
   - first:
-      213: 3227801327149017903
-    second: BackgroundGameNoiteSpriteSheet_1
+      213: -1056372049286547100
+    second: BackgroundGameNoite_SpriteSheet_1
   - first:
-      213: 9001483576278739521
-    second: BackgroundGameNoiteSpriteSheet_2
+      213: -1536869753136397057
+    second: BackgroundGameNoite_SpriteSheet_2
   - first:
-      213: 964373383569959599
-    second: BackgroundGameNoiteSpriteSheet_3
+      213: -1337581570826294681
+    second: BackgroundGameNoite_SpriteSheet_3
   - first:
-      213: -3783757882818704195
-    second: BackgroundGameNoiteSpriteSheet_4
+      213: -2536346614686419545
+    second: BackgroundGameNoite_SpriteSheet_4
   - first:
-      213: 5730920574428897441
-    second: BackgroundGameNoiteSpriteSheet_5
+      213: -1422965609245922939
+    second: BackgroundGameNoite_SpriteSheet_5
   - first:
-      213: -6590167198045168565
-    second: BackgroundGameNoiteSpriteSheet_6
+      213: 854413319791370900
+    second: BackgroundGameNoite_SpriteSheet_6
   - first:
-      213: -4532386899302579303
-    second: BackgroundGameNoiteSpriteSheet_7
+      213: 7178609458753440341
+    second: BackgroundGameNoite_SpriteSheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1920
+  spritePixelsToUnits: 240
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,7 +89,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -101,7 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 16384
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackgroundGameNoiteSpriteSheet_0
+      name: BackgroundGameNoite_SpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 426
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e555f8a51670fd6f0800000000000000
-      internalID: -657798905860237986
+      spriteID: fd0fef145eb80f220800000000000000
+      internalID: 2517666008471105759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackgroundGameNoiteSpriteSheet_1
+      name: BackgroundGameNoite_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 426
         y: 0
-        width: 1920
-        height: 1080
+        width: 426
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2b604694347bcc20800000000000000
-      internalID: 3227801327149017903
+      spriteID: 469bf93d7330751f0800000000000000
+      internalID: -1056372049286547100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackgroundGameNoiteSpriteSheet_2
+      name: BackgroundGameNoite_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 852
         y: 0
-        width: 1920
-        height: 1080
+        width: 426
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14a6b97ee91bbec70800000000000000
-      internalID: 9001483576278739521
+      spriteID: ff4434a2a11fbaae0800000000000000
+      internalID: -1536869753136397057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackgroundGameNoiteSpriteSheet_3
+      name: BackgroundGameNoite_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 1278
         y: 0
-        width: 1920
-        height: 1080
+        width: 426
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faa678e9b74226d00800000000000000
-      internalID: 964373383569959599
+      spriteID: 76a2acce5a4ff6de0800000000000000
+      internalID: -1337581570826294681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackgroundGameNoiteSpriteSheet_4
+      name: BackgroundGameNoite_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 7680
+        x: 1704
         y: 0
-        width: 1920
-        height: 1080
+        width: 426
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbcc186b0446d7bc0800000000000000
-      internalID: -3783757882818704195
+      spriteID: 7a5f95c21361dccd0800000000000000
+      internalID: -2536346614686419545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackgroundGameNoiteSpriteSheet_5
+      name: BackgroundGameNoite_SpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 9600
+        x: 2130
         y: 0
-        width: 1920
-        height: 1080
+        width: 426
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a0efc216e1588f40800000000000000
-      internalID: 5730920574428897441
+      spriteID: 589ac4d415c904ce0800000000000000
+      internalID: -1422965609245922939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackgroundGameNoiteSpriteSheet_6
+      name: BackgroundGameNoite_SpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 11520
+        x: 2556
         y: 0
-        width: 1920
-        height: 1080
+        width: 426
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4c161e79d50b84a0800000000000000
-      internalID: -6590167198045168565
+      spriteID: 492e681336c7bdb00800000000000000
+      internalID: 854413319791370900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackgroundGameNoiteSpriteSheet_7
+      name: BackgroundGameNoite_SpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 13440
+        x: 2982
         y: 0
-        width: 1920
-        height: 1080
+        width: 426
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9938f62f02ab911c0800000000000000
-      internalID: -4532386899302579303
+      spriteID: 55a0242d44b8f9360800000000000000
+      internalID: 7178609458753440341
       vertices: []
       indices: 
       edges: []
