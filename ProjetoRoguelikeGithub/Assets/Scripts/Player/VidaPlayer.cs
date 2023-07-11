@@ -20,7 +20,8 @@ public class VidaPlayer : MonoBehaviour
 
     private void Start()
     {
-        //vida = PlayerPrefs.GetFloat("VIDA");
+        vida = PlayerPrefs.GetFloat("VIDA");
+        numCora = vida;
     }
 
     private void OnCollisionStay2D(Collision2D col2)
@@ -34,8 +35,7 @@ public class VidaPlayer : MonoBehaviour
     {
         if(estaImortal == false)
         {
-            //vida -= 0.5f;
-            GetComponent<PlayerStatus>().vida -= 0.5f;
+            vida -= 0.5;
             GetComponent<FlashDano>().FlashRun();
             StartCoroutine("TempImortal");
         }
@@ -44,18 +44,12 @@ public class VidaPlayer : MonoBehaviour
 
     private void Update()
     {
-        vida = PlayerPrefs.GetFloat("VIDA");
         CoracoesCheck();
         Morreu();
     }
 
     public void CoracoesCheck()
     {
-        if(vida >= 6.1f)
-        {
-            vida = 6f;
-        }
-
         if (vida > numCora)
         {
             numCora = vida;
