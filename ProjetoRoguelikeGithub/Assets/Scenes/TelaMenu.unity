@@ -324,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundGameDia
       objectReference: {fileID: 0}
+    - target: {fileID: 996995140524281303, guid: 77dd1ccd3b821f747889bd3ebbc07943, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77dd1ccd3b821f747889bd3ebbc07943, type: 3}
 --- !u!1 &1083369148
@@ -1195,7 +1199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6269403103208076545, guid: 0121964d4db4a024d9729158a86407c9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6635110072345089957, guid: 0121964d4db4a024d9729158a86407c9, type: 3}
       propertyPath: m_Size.y
