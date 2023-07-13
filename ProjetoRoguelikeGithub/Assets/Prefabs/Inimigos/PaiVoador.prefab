@@ -166,6 +166,7 @@ MonoBehaviour:
   vidaInimigo: 0
   vidaIniMax: 0
   score: {fileID: 0}
+  explosao: {fileID: 7662578979842137004, guid: 2b2518fa8f977344a9c97f5d174915ef, type: 3}
 --- !u!50 &6791009251606006148
 Rigidbody2D:
   serializedVersion: 4

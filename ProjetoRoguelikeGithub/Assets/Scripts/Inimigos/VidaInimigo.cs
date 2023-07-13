@@ -7,6 +7,7 @@ public class VidaInimigo : MonoBehaviour
     public float vidaInimigoInicial;
     public float vidaInimigo, vidaIniMax;
     public scoreScript score;
+    public GameObject explosao;
 
     private void Start()
     {
@@ -36,6 +37,9 @@ public class VidaInimigo : MonoBehaviour
             }
             
             Debug.Log("Morto Inimigo");
+
+            Instantiate(explosao, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
         }
     }

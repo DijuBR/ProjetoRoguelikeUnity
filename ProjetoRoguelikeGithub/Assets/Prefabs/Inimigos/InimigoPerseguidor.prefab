@@ -167,6 +167,7 @@ MonoBehaviour:
   vidaInimigo: 0
   vidaIniMax: 0
   score: {fileID: 0}
+  explosao: {fileID: 2265204949607933259, guid: 10088e31856a72743b993af0adec865f, type: 3}
 --- !u!114 &1345111410400224064
 MonoBehaviour:
   m_ObjectHideFlags: 0
