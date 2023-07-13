@@ -9,10 +9,11 @@ public class PlayerMovement : MonoBehaviour
     private Transform playerTransform;
     private Rigidbody2D rb;
     
+    [Header("Movimentação e Vida")]
     public float velPlayer;
     public float forcaPulo;
     public double vida;
-    private int pulos = 0;
+    public int pulos = 0;
 
     public Animator animator;
 
@@ -52,9 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && pulos > 0)
         {
-            pulos--;
-            rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
-
+            Pular();
         }
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
@@ -65,11 +64,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.CompareTag("ChaoTileMap"))
-        {
-            pulos = 1;
-            Debug.Log("Pode Pular" + pulos);
-        }
+        
+    }
+
+    public void Pular()
+    {
+        pulos--;
+        rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
     }
 
 
