@@ -167,8 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaInimigo: 35
+  vidaInimigoInicial: 20
+  vidaInimigo: 0
   vidaIniMax: 0
+  score: {fileID: 0}
 --- !u!114 &3170622093287903728
 MonoBehaviour:
   m_ObjectHideFlags: 0

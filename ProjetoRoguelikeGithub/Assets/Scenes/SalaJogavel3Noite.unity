@@ -1461,7 +1461,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4922009659904276771, guid: 5c508a84e3816b94ab02474483cb7ad5, type: 3}
       propertyPath: m_Name
-      value: Score 1
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4922009659904276774, guid: 5c508a84e3816b94ab02474483cb7ad5, type: 3}
       propertyPath: m_Pivot.x

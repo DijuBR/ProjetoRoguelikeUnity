@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class scoreScript : MonoBehaviour
 {
-    public int pontuacao;
+    public float pontuacao;
     public TextMeshPro texto;
 
     private void Start()

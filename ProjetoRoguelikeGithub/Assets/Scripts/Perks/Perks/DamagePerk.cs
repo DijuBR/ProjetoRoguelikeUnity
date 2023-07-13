@@ -16,7 +16,7 @@ public class DamagePerk : PowerUpEffect
     {
         player = GameObject.Find("PlayerTeste");
         player.GetComponent<PlayerStatus>();
-        player.GetComponent<PlayerStatus>().dano *= 1.5f;
+        player.GetComponent<PlayerStatus>().dano *= 1.2f;
         
     }
 }

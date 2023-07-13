@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class VidaInimigo : MonoBehaviour
 {
+    public float vidaInimigoInicial;
     public float vidaInimigo, vidaIniMax;
+    public scoreScript score;
 
+    private void Start()
+    {
+        score = GameObject.Find("Score").GetComponent<scoreScript>();
+        vidaInimigo = vidaInimigoInicial + 1.35f*(score.pontuacao);
+        vidaIniMax = vidaInimigo;
+    }
     private void Awake()
     {
-        vidaIniMax = vidaInimigo;
+        
     }
     void Update()
     {

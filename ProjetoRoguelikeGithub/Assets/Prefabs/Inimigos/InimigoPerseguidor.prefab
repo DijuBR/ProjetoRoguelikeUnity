@@ -163,8 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaInimigo: 25
+  vidaInimigoInicial: 15
+  vidaInimigo: 0
   vidaIniMax: 0
+  score: {fileID: 0}
 --- !u!114 &1345111410400224064
 MonoBehaviour:
   m_ObjectHideFlags: 0
