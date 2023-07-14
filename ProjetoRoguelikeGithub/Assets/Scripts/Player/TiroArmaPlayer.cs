@@ -11,6 +11,8 @@ public class TiroArmaPlayer : MonoBehaviour
     public float disTiro;
     public VidaInimigo VidaInimigo;
 
+    public GameObject explosao;
+
 
     public Rigidbody2D rb;
     public GameObject inimigo;
@@ -44,6 +46,7 @@ public class TiroArmaPlayer : MonoBehaviour
     {
         if (col.gameObject.tag == "Inimigo")
         {
+                //Instantiate(explosao, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
                 col.GetComponent<FlashDano>().FlashRun();
                 Debug.Log(dano);
@@ -51,9 +54,19 @@ public class TiroArmaPlayer : MonoBehaviour
         }
         if (col.gameObject.CompareTag("ChaoTileMap"))
         {
+            //Instantiate(explosao, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
+        if (col.gameObject.CompareTag("DomoTileMap"))
+        {
+            //Instantiate(explosao, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
 
-    
+    private void OnDestroy()
+    {
+        Instantiate(explosao, transform.position, Quaternion.identity);
+    }
+
 }

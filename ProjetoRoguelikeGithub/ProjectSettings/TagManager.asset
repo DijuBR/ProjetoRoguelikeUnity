@@ -13,6 +13,7 @@ TagManager:
   - TiroPlayerPos
   - TiroPlayer
   - ChaoTileMap
+  - DomoTileMap
   layers:
   - Default
   - TransparentFX

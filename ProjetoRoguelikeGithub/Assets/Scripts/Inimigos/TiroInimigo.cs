@@ -8,6 +8,7 @@ public class TiroInimigo : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     private float timer;
+    public GameObject explosao;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +27,18 @@ public class TiroInimigo : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Instantiate(explosao, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             GameObject.Find("PlayerTeste").GetComponent<VidaPlayer>().Dano();
         }
         if (other.gameObject.CompareTag("ChaoTileMap"))
         {
+            Instantiate(explosao, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
+        if (other.gameObject.CompareTag("DomoTileMap"))
+        {
+            Instantiate(explosao, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
@@ -48,6 +56,7 @@ public class TiroInimigo : MonoBehaviour
 
         if (timer > 6)
         {
+            Instantiate(explosao, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

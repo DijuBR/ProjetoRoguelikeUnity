@@ -150,6 +150,7 @@ MonoBehaviour:
   quantidadeTiro: 0
   disTiro: 0
   VidaInimigo: {fileID: 0}
+  explosao: {fileID: 7688338741757449089, guid: 924737a80aa596a448f09ff20ff9aa95, type: 3}
   rb: {fileID: 0}
   inimigo: {fileID: 0}
 --- !u!1 &7824810370612574938
