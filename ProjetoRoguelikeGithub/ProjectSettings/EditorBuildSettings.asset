@@ -6,30 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TelaMenu.unity
+    path: Assets/Scenes/Menu e cartas/TelaMenu.unity
     guid: f01624ae52af6d844a6944c1df7ad779
   - enabled: 1
-    path: Assets/Scenes/SalaJogavel1.unity
+    path: "Assets/Scenes/Salas Jog\xE1veis/SalaJogavel1.unity"
     guid: 926bdda2bac7fcd469d94e345ba7cf5a
   - enabled: 1
-    path: Assets/Scenes/SalaJogavel1Noite.unity
+    path: "Assets/Scenes/Salas Jog\xE1veis/SalaJogavel1Noite.unity"
     guid: c314a6317c1547042b31750b0c8ab4c6
   - enabled: 1
-    path: Assets/Scenes/SalaJogavel2.unity
+    path: "Assets/Scenes/Salas Jog\xE1veis/SalaJogavel2.unity"
     guid: 9650c1f4d988f1c4f844f04a48e9dfe3
   - enabled: 1
-    path: Assets/Scenes/SalaJogavel2Noite.unity
+    path: "Assets/Scenes/Salas Jog\xE1veis/SalaJogavel2Noite.unity"
     guid: 4035bf8d0b1e0944a91b8df79f1c3750
   - enabled: 1
-    path: Assets/Scenes/SalaJogavel3.unity
+    path: "Assets/Scenes/Salas Jog\xE1veis/SalaJogavel3.unity"
     guid: cb15d5d94182b074b951df10625f2248
   - enabled: 1
-    path: Assets/Scenes/SalaJogavel3Noite.unity
+    path: "Assets/Scenes/Salas Jog\xE1veis/SalaJogavel3Noite.unity"
     guid: 68a4c75ce397f934baabc9dd405e952b
   - enabled: 1
-    path: Assets/Scenes/CenaCartas.unity
+    path: Assets/Scenes/Menu e cartas/CenaCartas.unity
     guid: 76cc31b187d56904e8fc3d32d3bec813
   - enabled: 1
-    path: Assets/Scenes/MenuGameOver.unity
+    path: Assets/Scenes/Menu e cartas/MenuGameOver.unity
     guid: 15093681fcc86d2459b36c8f988be517
   m_configObjects: {}
