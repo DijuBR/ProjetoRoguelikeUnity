@@ -8,6 +8,7 @@ public class HpPerk : PowerUpEffect
 {
     public int quant;
     public GameObject player;
+    public string info;
 
 
     public override void Apply()

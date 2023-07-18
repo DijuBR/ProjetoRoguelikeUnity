@@ -9,6 +9,7 @@ public class SpeedPerk : PowerUpEffect
     public float quant;
     private PlayerStatus status;
     private GameObject player;
+    public string info;
 
 
     public override void Apply()

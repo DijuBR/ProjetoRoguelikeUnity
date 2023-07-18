@@ -6,12 +6,9 @@ using UnityEngine;
 
 public class DamagePerk : PowerUpEffect
 {
-
-    public int quant;
     public GameObject player;
     public PlayerStatus status;
-
-
+    public string info;
     public override void Apply()
     {
         player = GameObject.Find("PlayerTeste");

@@ -96,3 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpEffect: {fileID: 11400000, guid: 0c190a36d79b5404b84fff0419b64cc4, type: 2}
+  info1: Velocidade +0.85

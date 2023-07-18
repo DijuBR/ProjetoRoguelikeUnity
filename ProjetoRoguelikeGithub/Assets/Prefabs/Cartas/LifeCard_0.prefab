@@ -96,3 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpEffect: {fileID: 11400000, guid: d715610a6821efb41a5d0e1c4ecf7879, type: 2}
+  info1: Vida +1

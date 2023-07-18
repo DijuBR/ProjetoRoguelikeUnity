@@ -96,3 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpEffect: {fileID: 11400000, guid: ca9b19308ac2d794c9ea969e3864dfa2, type: 2}
+  info1: Firerate +0.25
