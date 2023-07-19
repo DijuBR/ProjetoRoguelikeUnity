@@ -184,8 +184,8 @@ MonoBehaviour:
     em sua totalidade
 
 
-    volte para o menu e clique em jogar para jogar uma sequencia
-    de fases e derrotar o boss'
+    volte para o menu e clique em jogar para experienciar
+    uma sequencia de fases e derrotar o boss'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631808fc62beda64098f1a435cb11705, type: 2}
   m_sharedMaterial: {fileID: 4378334481276280705, guid: 631808fc62beda64098f1a435cb11705, type: 2}

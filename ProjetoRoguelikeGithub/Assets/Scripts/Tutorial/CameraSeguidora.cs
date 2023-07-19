@@ -12,6 +12,6 @@ public class CameraSeguidora : MonoBehaviour
     void Update()
     {
         Vector3 newPos = new Vector3(alvo.position.x, transform.position.y, -10f);
-        transform.position = Vector3.Slerp(transform.position, newPos, SeguirVel * Time.deltaTime);
+        transform.position = Vector3.Slerp(transform.position, newPos, SeguirVel);
     }
 }

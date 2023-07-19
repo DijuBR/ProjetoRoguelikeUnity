@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 2765922469360211235}
   - component: {fileID: 2765922469360211237}
   - component: {fileID: 2765922469360211238}
-  - component: {fileID: 3333091666140318343}
   - component: {fileID: 8899378812578354314}
   - component: {fileID: 203290606090454971}
   - component: {fileID: 2676644314242356678}
   - component: {fileID: 5125375173437394825}
+  - component: {fileID: 2855825387395082859}
   m_Layer: 8
   m_Name: InimigoPerseguidorTutorial
-  m_TagString: Inimigo
+  m_TagString: InimigoTutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,23 +137,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5471859, y: 0.6861248}
   m_EdgeRadius: 0
---- !u!114 &3333091666140318343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2765922469360211239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vidaInimigoInicial: 15
-  vidaInimigo: 0
-  vidaIniMax: 0
-  score: {fileID: 0}
-  explosao: {fileID: 2265204949607933259, guid: 10088e31856a72743b993af0adec865f, type: 3}
 --- !u!114 &8899378812578354314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +259,7 @@ MonoBehaviour:
   - {x: -0.21867752, y: -0.1720047, z: 0}
   m_ShapePathHash: -274603787
   m_Mesh: {fileID: 0}
-  m_InstanceId: 94468
+  m_InstanceId: 49748
 --- !u!114 &5125375173437394825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +274,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4010360680732094367, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
   speed: 0
-  animator: {fileID: 0}
+--- !u!114 &2855825387395082859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765922469360211239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c16bf73039a1ce478cd482614ffa9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaInimigoInicial: 10
+  vidaInimigo: 0
+  vidaIniMax: 0
+  explosao: {fileID: 2265204949607933259, guid: 10088e31856a72743b993af0adec865f, type: 3}
 --- !u!1001 &3827512744929960388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -415,10 +413,41 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6643993477033730868, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
 --- !u!224 &7577933448714983779 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6643993476501452967, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
   m_PrefabInstance: {fileID: 3827512744929960388}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7577933448179811069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6643993477033730873, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+  m_PrefabInstance: {fileID: 3827512744929960388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7577933448179811059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6643993477033730871, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+  m_PrefabInstance: {fileID: 3827512744929960388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7577933448179811069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5458431310041376444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7577933448179811069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba173cb36441c994d9ac848e735f914c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 7577933448179811059}
+  pos: {fileID: 0}

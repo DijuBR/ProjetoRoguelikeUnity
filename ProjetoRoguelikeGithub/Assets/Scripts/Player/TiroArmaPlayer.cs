@@ -62,6 +62,13 @@ public class TiroArmaPlayer : MonoBehaviour
             //Instantiate(explosao, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
+        if (col.CompareTag("InimigoTutorial"))
+        {
+            Destroy(this.gameObject);
+            col.GetComponent<FlashDano>().FlashRun();
+            Debug.Log(dano);
+            col.GetComponent<VidaInimigoTutorial>().vidaInimigo -= dano;
+        }
     }
 
     private void OnDestroy()
