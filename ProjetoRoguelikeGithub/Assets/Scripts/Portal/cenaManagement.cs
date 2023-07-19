@@ -17,6 +17,11 @@ public class cenaManagement : MonoBehaviour
         GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
         SceneManager.LoadScene(cenaAtual);
     }
+
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("TutorialFase");
+    }
 }
 
 

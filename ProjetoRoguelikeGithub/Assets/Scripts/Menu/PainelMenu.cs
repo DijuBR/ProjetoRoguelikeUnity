@@ -22,17 +22,19 @@ public class PainelMenu : MonoBehaviour
         }
     }
 
-    void Resumir()
+    public void Resumir()
     {
         menuPauseUI.SetActive(false);
         Time.timeScale = 1f;
         JogoPausado = false;
+        Debug.Log("Resumido!");
     }
 
-    void Pausar()
+    public void Pausar()
     {
         menuPauseUI.SetActive(true);
         Time.timeScale = 0f;
         JogoPausado = true;
+        Debug.Log("Pausado!");
     }
 }

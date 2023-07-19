@@ -31,9 +31,17 @@ public class VidaInimigo : MonoBehaviour
             {
                 GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos -= 1;
             }
-            else
+            else if (GameObject.Find("SpawnerNoite") == true)
             {
                 GameObject.Find("SpawnerNoite").GetComponent<EnemySpawn>().inimigosnascidos -= 1;
+            }
+            else if (GameObject.Find("SpawnerTutorial") == true)
+            {
+                GameObject.Find("SpawnerTutorial").GetComponent<SpawnerTutorial>().inimigosnascidos -= 1;
+            }
+            else
+            {
+                GameObject.Find("SpawnerTutorialFase").GetComponent<SpawnerTutorialFase>().inimigosnascidos -= 1;
             }
             
             Debug.Log("Morto Inimigo");

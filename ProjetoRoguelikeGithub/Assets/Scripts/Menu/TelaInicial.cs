@@ -13,6 +13,13 @@ public class TelaInicial : MonoBehaviour
         
     }
 
+    public void Tutorial()
+    {
+        GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
+        SceneManager.LoadScene("CenaTutorial");
+
+    }
+
     // Update is called once per frame
     public void ExitGame()
     {
