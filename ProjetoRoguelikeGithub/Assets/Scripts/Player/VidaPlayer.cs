@@ -25,7 +25,7 @@ public class VidaPlayer : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D col2)
     {
-       if (col2.gameObject.CompareTag("Inimigo"))
+       if (col2.gameObject.CompareTag("Inimigo") || (col2.gameObject.CompareTag("InimigoTutorial")))
        {
         Dano();
        }
