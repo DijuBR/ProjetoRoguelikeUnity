@@ -32,8 +32,11 @@ public class PlayerMovement : MonoBehaviour
     {
         forcaPulo = PlayerPrefs.GetFloat("FORCPULO");
         velPlayer = PlayerPrefs.GetFloat("VELPLAYER");
-        MovimentacaoDoPlayer();
-        Virar();
+        if(GameObject.Find("Canvas").GetComponent<PainelMenu>().JogoPausado == false)
+        {
+            MovimentacaoDoPlayer();
+            Virar();
+        }
     }
 
     private void Virar() //Virar o Player

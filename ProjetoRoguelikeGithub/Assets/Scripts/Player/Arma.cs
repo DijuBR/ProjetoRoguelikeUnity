@@ -27,7 +27,11 @@ public class Arma : MonoBehaviour
     void Update()
     {
         delayTiro = PlayerPrefs.GetFloat("FIRERATE");
-        AtirarPlayer();
+        if (GameObject.Find("Canvas").GetComponent<PainelMenu>().JogoPausado == false)
+        {
+            AtirarPlayer();
+        }
+        
        
     }
 

@@ -155,7 +155,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 2502330241873236043, guid: 26294fe685d921a46a045b088fc15b91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
   - {x: -0.37545168, y: 0.18765764, z: 0}
   m_ShapePathHash: 733418065
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43170
+  m_InstanceId: 37094
 --- !u!1 &4584944978266029439
 GameObject:
   m_ObjectHideFlags: 0
