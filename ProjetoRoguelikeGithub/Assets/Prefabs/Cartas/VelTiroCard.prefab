@@ -96,4 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpEffect: {fileID: 11400000, guid: 692cc1e3604b4ad4a874de7b19e99e1f, type: 2}
-  info1: Vel Tiro +
+  info1: Aumenta a velocidade de tiro

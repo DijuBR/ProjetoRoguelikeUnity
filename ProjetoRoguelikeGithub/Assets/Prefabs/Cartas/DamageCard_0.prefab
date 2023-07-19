@@ -96,4 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpEffect: {fileID: 11400000, guid: a8604ca1bc0d9b945a6ad88d02bc5088, type: 2}
-  info1: Dano *1.25
+  info1: Aumenta seu Dano
