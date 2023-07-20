@@ -46,20 +46,25 @@ public class TiroArmaPlayer : MonoBehaviour
     {
         if (col.gameObject.tag == "Inimigo")
         {
-                //Instantiate(explosao, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
                 col.GetComponent<FlashDano>().FlashRun();
                 Debug.Log(dano);
+            if(col.GetComponent<VidaInimigo>() == true)
+            {
                 col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
+            }
+            else
+            {
+                col.GetComponent<BossScript>().vidaBoss -= dano;
+            }
+            //col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
         }
         if (col.gameObject.CompareTag("ChaoTileMap"))
         {
-            //Instantiate(explosao, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
         if (col.gameObject.CompareTag("DomoTileMap"))
         {
-            //Instantiate(explosao, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
         if (col.CompareTag("InimigoTutorial"))
