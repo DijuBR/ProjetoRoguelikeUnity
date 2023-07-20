@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PainelMenu : MonoBehaviour
 {
@@ -38,12 +39,16 @@ public class PainelMenu : MonoBehaviour
         JogoPausado = true;
         Debug.Log("Pausado!");
     }
-    void Menu()
+    
+    public void Menu()
     {
+        Debug.Log("Menu!!!");
         SceneManager.LoadScene("TelaMenu");
     }
-    void Sair()
+    
+    public void Sair()
     {
+        Debug.Log("Saiu!!!");
         Application.Quit();
     }
 }
