@@ -39,9 +39,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
-  player: {fileID: 0}
-  rb: {fileID: 0}
-  boss: {fileID: 0}
+  player: {fileID: 4010360680732094367, guid: c9eb056f1a26cf14c8ef500e2ebca89b, type: 3}
+  rb: {fileID: 5558200813786972955, guid: a261927f172d690469b1e79657c22262, type: 3}
+  boss: {fileID: 459753941600498810, guid: a261927f172d690469b1e79657c22262, type: 3}
 --- !u!1107 &-1430993020908645366
 AnimatorStateMachine:
   serializedVersion: 6
