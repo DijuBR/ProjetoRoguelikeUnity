@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 459753941600498810}
   - component: {fileID: 459753941600498805}
   - component: {fileID: 5558200813786972955}
-  - component: {fileID: 6663817324345392599}
   - component: {fileID: 673550837296755521}
   - component: {fileID: 5664766600611253285}
   - component: {fileID: 7649372997568278367}
-  m_Layer: 0
+  - component: {fileID: 3293313876238982816}
+  m_Layer: 8
   m_Name: Boss
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -95,45 +95,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459753941600498804}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6663817324345392599
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459753941600498804}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.008467466, y: 0.023222193}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.5625, y: 0.7827759}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.54618806, y: 0.6735935}
-  m_EdgeRadius: 0
 --- !u!95 &673550837296755521
 Animator:
   serializedVersion: 3
@@ -166,7 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 0}
-  vidaBossInicial: 100
+  particula: {fileID: 2926942662911343963, guid: 3659f1a066c47a34d919f78acd685515, type: 3}
+  vidaBossInicial: 10
   vidaBoss: 0
   vidaBossMax: 0
 --- !u!114 &7649372997568278367
@@ -183,3 +158,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
   duracao: 0.25
+--- !u!61 &3293313876238982816
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459753941600498804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0068238676, y: 0.0142070055}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.5625, y: 0.7827759}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5483205, y: 0.654963}
+  m_EdgeRadius: 0
