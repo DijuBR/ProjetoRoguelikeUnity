@@ -5,9 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class TelaInicial : MonoBehaviour
 {
+    ControladorAudio audioManager;
+
+    private void Start()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
+    }
+
+
     // Start is called before the first frame update
     public void Play()
     {
+        audioManager.PlaySFX(audioManager.Botoes);
         GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
         SceneManager.LoadScene("SalaJogavel1");
         
@@ -15,6 +24,7 @@ public class TelaInicial : MonoBehaviour
 
     public void Tutorial()
     {
+        audioManager.PlaySFX(audioManager.Botoes);
         GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
         SceneManager.LoadScene("CenaTutorial");
 
@@ -24,6 +34,7 @@ public class TelaInicial : MonoBehaviour
     public void ExitGame()
     {
         print("Saiu");
+        audioManager.PlaySFX(audioManager.Botoes);
         GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
         Application.Quit();
     }

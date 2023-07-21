@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class VidaPlayer : MonoBehaviour
 {
+    ControladorAudio audioManager;
+    
     [Header("VIDA")]
     public double vida;
     public double numCora;
@@ -21,6 +23,7 @@ public class VidaPlayer : MonoBehaviour
     private void Start()
     {
         vida = PlayerPrefs.GetFloat("VIDA");
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
     private void OnCollisionStay2D(Collision2D col2)
@@ -36,6 +39,7 @@ public class VidaPlayer : MonoBehaviour
         {
             GetComponent<PlayerStatus>().vida -= 0.5f;
             GetComponent<FlashDano>().FlashRun();
+            audioManager.PlaySFX(audioManager.Dano);
             StartCoroutine("TempImortal");
         }
         

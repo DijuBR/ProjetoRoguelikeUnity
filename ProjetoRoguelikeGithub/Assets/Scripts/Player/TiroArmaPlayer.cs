@@ -12,15 +12,11 @@ public class TiroArmaPlayer : MonoBehaviour
     public VidaInimigo VidaInimigo;
 
     public GameObject explosao;
-
+    ControladorAudio audioManager;
 
     public Rigidbody2D rb;
     public GameObject inimigo;
     private Transform tiroPlayerPos;
-    
-    
-    
-
     
     // Start is called before the first frame update
     void Start()
@@ -32,8 +28,9 @@ public class TiroArmaPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         inimigo = GameObject.FindGameObjectWithTag("Inimigo");
         rb.velocity = tiroPlayerPos.right * velTiro;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
 
-       
+
     }
     private void Update()
     {
@@ -47,7 +44,8 @@ public class TiroArmaPlayer : MonoBehaviour
         if (col.gameObject.tag == "Inimigo")
         {
                 Destroy(this.gameObject);
-                col.GetComponent<FlashDano>().FlashRun();
+            audioManager.PlaySFX(audioManager.Hit);
+            col.GetComponent<FlashDano>().FlashRun();
                 Debug.Log(dano);
             if(col.GetComponent<VidaInimigo>() == true)
             {
@@ -62,14 +60,18 @@ public class TiroArmaPlayer : MonoBehaviour
         if (col.gameObject.CompareTag("ChaoTileMap"))
         {
             Destroy(this.gameObject);
+            audioManager.PlaySFX(audioManager.TiroExplodindo);
+
         }
         if (col.gameObject.CompareTag("DomoTileMap"))
         {
             Destroy(this.gameObject);
+            audioManager.PlaySFX(audioManager.TiroExplodindo);
         }
         if (col.CompareTag("InimigoTutorial"))
         {
             Destroy(this.gameObject);
+            audioManager.PlaySFX(audioManager.Hit);
             col.GetComponent<FlashDano>().FlashRun();
             Debug.Log(dano);
             col.GetComponent<VidaInimigoTutorial>().vidaInimigo -= dano;
@@ -79,6 +81,7 @@ public class TiroArmaPlayer : MonoBehaviour
     private void OnDestroy()
     {
         Instantiate(explosao, transform.position, Quaternion.identity);
+        audioManager.PlaySFX(audioManager.TiroExplodindo);
     }
 
 }

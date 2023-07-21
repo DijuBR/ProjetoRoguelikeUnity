@@ -9,6 +9,8 @@ public class Arma : MonoBehaviour
     public Transform tiroPlayerPos;
     public Transform arma;
 
+    ControladorAudio audioManager;
+
     
     public float delayTiro;
     private float tiroCD = 0.0f;
@@ -19,8 +21,7 @@ public class Arma : MonoBehaviour
         inimigo = GameObject.FindGameObjectWithTag("Inimigo");
         arma = GameObject.FindGameObjectWithTag("Arma").GetComponent<Transform>();
         delayTiro = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().fireRate;
-
-
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
     // Update is called once per frame
@@ -39,8 +40,8 @@ public class Arma : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > tiroCD)
         {
-
             tiroCD = Time.time + delayTiro;
+            audioManager.PlaySFX(audioManager.Atirando);
             Instantiate(tiroPlayer, tiroPlayerPos.position, Quaternion.identity);
         }
     }

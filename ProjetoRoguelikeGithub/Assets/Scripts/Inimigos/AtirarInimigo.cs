@@ -16,10 +16,14 @@ public class AtirarInimigo : MonoBehaviour
 
     public float delayTiroIni;
     private float tiroInimCD = 0.0f;
+
+    ControladorAudio audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
         Settings();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
     // Update is called once per frame
@@ -34,6 +38,7 @@ public class AtirarInimigo : MonoBehaviour
         if (Time.time > tiroInimCD)
         {
             tiroInimCD = Time.time + delayTiroIni;
+            audioManager.PlaySFX(audioManager.Atirainimigo);
             Instantiate(Tiro, TiroPos.position, Quaternion.identity);
         }
         

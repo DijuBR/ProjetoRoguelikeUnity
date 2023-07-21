@@ -11,14 +11,16 @@ public class ControleBotao : Perk
     public GameObject texto;
     public PlayerStatus status;
     public string textoBotao;
+    ControladorAudio audioManager;
 
     private void Start()
     {
-        
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
     public void PerkApply()
     {
+        audioManager.PlaySFX(audioManager.Botoes);
         AplicarPerk();
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private Camera mainCam;
     private Transform playerTransform;
     private Rigidbody2D rb;
+
+    ControladorAudio audioManager;
 
     public ParticleSystem poeira;
     
@@ -26,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         playerTransform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
     public void Update()
@@ -59,8 +63,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(Horizontal * velPlayer, rb.velocity.y);
+
         
-        if(Mathf.Abs(Horizontal) > 0)
+
+        if (Mathf.Abs(Horizontal) > 0)
         {
             CriaPoeira();
         }
@@ -80,13 +86,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        
+        if(col.collider.CompareTag("ChaoTileMap") == true && rb.velocity.magnitude >= 0.01f)
+        {
+            audioManager.PlaySFX(audioManager.Andando);
+        }
     }
 
     public void Pular()
     {
         pulos--;
         rb.velocity = new Vector2(rb.velocity.x, forcaPulo);
+        audioManager.PlaySFX(audioManager.Pulando);
     }
 
     void CriaPoeira()

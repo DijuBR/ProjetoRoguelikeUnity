@@ -15,6 +15,7 @@ TagManager:
   - ChaoTileMap
   - DomoTileMap
   - InimigoTutorial
+  - Audio
   layers:
   - Default
   - TransparentFX
