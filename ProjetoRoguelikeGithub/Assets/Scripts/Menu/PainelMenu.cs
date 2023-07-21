@@ -8,6 +8,12 @@ public class PainelMenu : MonoBehaviour
 {
     public bool JogoPausado = false;
     public GameObject menuPauseUI;
+    ControladorAudio audioManager;
+
+    private void Start()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
+    }
 
     private void Update()
     {
@@ -26,10 +32,12 @@ public class PainelMenu : MonoBehaviour
 
     public void Resumir()
     {
+        
         menuPauseUI.SetActive(false);
         Time.timeScale = 1f;
         JogoPausado = false;
         Debug.Log("Resumido!");
+        audioManager.PlaySFX(audioManager.Botoes);
     }
 
     public void Pausar()
@@ -43,12 +51,14 @@ public class PainelMenu : MonoBehaviour
     public void Menu()
     {
         Debug.Log("Menu!!!");
+        audioManager.PlaySFX(audioManager.Botoes);
         SceneManager.LoadScene("TelaMenu");
     }
     
     public void Sair()
     {
         Debug.Log("Saiu!!!");
+        audioManager.PlaySFX(audioManager.Botoes);
         Application.Quit();
     }
 }
