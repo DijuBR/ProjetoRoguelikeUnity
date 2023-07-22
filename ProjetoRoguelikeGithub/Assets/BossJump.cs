@@ -27,8 +27,6 @@ public class BossJump : StateMachineBehaviour
     {
         if(timer <= 0)
         {
-            //animator.SetTrigger("isIdle");
-            //animator.transform.position = Vector2.MoveTowards(playerPos.position.y, animator.transform.position.y, speed * Time.deltaTime);
             rb.AddForce(Vector2.down * queda);
         }
         else
