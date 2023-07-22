@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 673550837296755521}
   - component: {fileID: 5664766600611253285}
   - component: {fileID: 7649372997568278367}
-  - component: {fileID: 3293313876238982816}
+  - component: {fileID: 6202438566683931231}
+  - component: {fileID: 4308336683814775454}
   m_Layer: 8
   m_Name: Boss
   m_TagString: Inimigo
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 459753941600498804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2.7, y: 2.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,11 +96,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459753941600498804}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 6
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -121,7 +122,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 3bfc5ad41aa97fd49aaa290703aeb2fb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -141,6 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 0}
   particula: {fileID: 2926942662911343963, guid: 3659f1a066c47a34d919f78acd685515, type: 3}
+  player: {fileID: 0}
+  Virado: 0
   vidaBossInicial: 10
   vidaBoss: 0
   vidaBossMax: 0
@@ -158,7 +161,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 0565337851ab61a468badd1db922ecc6, type: 2}
   duracao: 0.25
---- !u!61 &3293313876238982816
+--- !u!70 &6202438566683931231
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459753941600498804}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015517958, y: -0.100427136}
+  m_Size: {x: 0.39606595, y: 0.396066}
+  m_Direction: 0
+--- !u!61 &4308336683814775454
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +190,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0068238676, y: 0.0142070055}
+  m_Offset: {x: 0.009358883, y: 0.10249031}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -182,5 +201,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5483205, y: 0.654963}
+  m_Size: {x: 0.54869294, y: 0.5080131}
   m_EdgeRadius: 0

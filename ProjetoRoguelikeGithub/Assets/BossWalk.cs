@@ -5,27 +5,28 @@ using UnityEngine;
 public class BossWalk : StateMachineBehaviour
 {
     public float speed = 2.5f;
-    public Transform player;
-    public Rigidbody2D rb;
-    public Transform boss;
+     Transform player;
+     Transform bossPos;
+     Rigidbody2D bossrb;
+     BossScript boss;
+     GameObject paredeCol;
 
-
-    //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        player = GameObject.FindWithTag("Player").transform;
+        bossPos = animator.GetComponent<Transform>();
+        bossrb = animator.GetComponent<Rigidbody2D>();
+        boss = animator.GetComponent<BossScript>();
+        paredeCol = GameObject.Find("ParedeCol");
     }
 
-    //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //player = GameObject.FindGameObjectWithTag("Player").transform;
-        //rb = animator.GetComponent<Rigidbody2D>();
-        //boss = animator.GetComponent<Transform>();
+        boss.OlharPlayer();
 
-        //Vector2 target = new Vector2(player.position.x, rb.position.y);
-        //Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        //rb.MovePosition(newPos);
+        Vector2 target = new Vector2(paredeCol.transform.position.x, bossPos.position.y);
+        Vector2 newPos = Vector2.MoveTowards(bossPos.position, target, speed * Time.fixedDeltaTime);
+        bossrb.MovePosition(newPos);
     }
 
     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
