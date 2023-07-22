@@ -439,6 +439,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2571497607297722, guid: c94c702069f816342964a15a19e52a9a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f9acd6c9cdc0ca14a88a62bea3438a74, type: 3}
+    - target: {fileID: 974805477992428832, guid: c94c702069f816342964a15a19e52a9a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4902678073143580098, guid: c94c702069f816342964a15a19e52a9a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -487,6 +495,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGDia
       objectReference: {fileID: 0}
+    - target: {fileID: 7399206819282745353, guid: c94c702069f816342964a15a19e52a9a, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399206819282745353, guid: c94c702069f816342964a15a19e52a9a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8650d6792ee74484288d45dc0d87d2e1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c94c702069f816342964a15a19e52a9a, type: 3}
 --- !u!1 &540113807

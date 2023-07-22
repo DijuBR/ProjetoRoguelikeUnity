@@ -1696,6 +1696,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2571497607297722, guid: c94c702069f816342964a15a19e52a9a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 974805476836476786, guid: c94c702069f816342964a15a19e52a9a, type: 3}
       propertyPath: BGMusica
       value: 
@@ -1752,6 +1756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGDia
       objectReference: {fileID: 0}
+    - target: {fileID: 7399206819282745353, guid: c94c702069f816342964a15a19e52a9a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 46af3873d3c08b14ea073b44291ffda0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c94c702069f816342964a15a19e52a9a, type: 3}
 --- !u!1 &2127479119

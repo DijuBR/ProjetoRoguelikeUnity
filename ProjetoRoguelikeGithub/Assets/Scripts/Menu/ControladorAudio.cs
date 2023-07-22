@@ -5,7 +5,7 @@ using UnityEngine;
 public class ControladorAudio : MonoBehaviour
 {
     [Header("-----------AudioSouce----------")]
-    [SerializeField] AudioSource musicSource;
+
     [SerializeField] AudioSource SFXSource;
 
     [Header("- Player Sons")]
@@ -33,12 +33,6 @@ public class ControladorAudio : MonoBehaviour
     public AudioClip Botoes;
     public AudioClip BotaoCarta;
 
-    [Header("- Músicas")]
-    public AudioClip MenuMS;
-    public AudioClip MSFase1;
-    public AudioClip MSFase2;
-    public AudioClip MSFase3;
-
     ControladorAudio audioManager;
 
     private void Start()
@@ -49,10 +43,5 @@ public class ControladorAudio : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
-    }
-
-    public void PlayMS(AudioClip clipMS)
-    {
-        musicSource.PlayOneShot(clipMS);
     }
 }
