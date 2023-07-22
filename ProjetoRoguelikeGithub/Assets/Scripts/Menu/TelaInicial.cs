@@ -10,8 +10,8 @@ public class TelaInicial : MonoBehaviour
     private void Start()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
+        audioManager.PlayMS(audioManager.MenuMS);
     }
-
 
     // Start is called before the first frame update
     public void Play()

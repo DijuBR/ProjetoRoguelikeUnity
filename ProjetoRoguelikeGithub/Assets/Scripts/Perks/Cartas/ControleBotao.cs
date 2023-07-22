@@ -20,7 +20,7 @@ public class ControleBotao : Perk
 
     public void PerkApply()
     {
-        audioManager.PlaySFX(audioManager.Botoes);
+        audioManager.PlaySFX(audioManager.BotaoCarta);
         AplicarPerk();
     }
 

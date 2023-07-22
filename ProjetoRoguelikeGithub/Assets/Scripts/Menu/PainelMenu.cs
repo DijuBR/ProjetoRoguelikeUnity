@@ -32,7 +32,6 @@ public class PainelMenu : MonoBehaviour
 
     public void Resumir()
     {
-        
         menuPauseUI.SetActive(false);
         Time.timeScale = 1f;
         JogoPausado = false;

@@ -83,15 +83,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if(col.collider.CompareTag("ChaoTileMap") == true && rb.velocity.magnitude >= 0.01f)
-        {
-            audioManager.PlaySFX(audioManager.Andando);
-        }
-    }
-
     public void Pular()
     {
         pulos--;

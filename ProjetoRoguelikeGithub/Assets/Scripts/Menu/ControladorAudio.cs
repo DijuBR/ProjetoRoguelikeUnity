@@ -11,7 +11,6 @@ public class ControladorAudio : MonoBehaviour
     [Header("- Player Sons")]
     
     [Header("----------AudioClips----------")]
-    public AudioClip Andando;
     public AudioClip Pulando;
     public AudioClip Dano;
     public AudioClip Morte;
@@ -30,25 +29,30 @@ public class ControladorAudio : MonoBehaviour
     public AudioClip Stomp;
 
     [Header("- Geral Sons")]
-    public AudioClip BGMusica;
     public AudioClip Portal;
     public AudioClip Botoes;
-    public AudioClip CenaBotoes;
+    public AudioClip BotaoCarta;
+
+    [Header("- Músicas")]
+    public AudioClip MenuMS;
+    public AudioClip MSFase1;
+    public AudioClip MSFase2;
+    public AudioClip MSFase3;
 
     ControladorAudio audioManager;
 
-    public void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
-    }
-
     private void Start()
     {
-        audioManager.PlaySFX(audioManager.BGMusica);
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
+    }
+
+    public void PlayMS(AudioClip clipMS)
+    {
+        musicSource.PlayOneShot(clipMS);
     }
 }
