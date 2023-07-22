@@ -11,6 +11,7 @@ public class BossScript : MonoBehaviour
     public Transform player;
     public bool Virado = false;
     public BoxCollider2D ParedeCol;
+    public Animator anim;
 
     [Header("Variáveis Vida Boss")]
     public float vidaBossInicial;
