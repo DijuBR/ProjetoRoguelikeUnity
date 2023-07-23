@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class BossIdle : StateMachineBehaviour
 {
-    
+    [Header("Timer")]
+    public float tempoMin, tempoMax, timer;
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         EscolherState(animator);
+        timer = Random.Range(tempoMin, tempoMax);
     }
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

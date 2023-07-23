@@ -35,14 +35,6 @@ public class BossScript : MonoBehaviour
         }
     }
 
-    public void OlharPlayer()
-    {
-        if (transform.position.x > player.transform.position.x)
-        {
-            
-        }
-
-    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         col = ParedeCol;

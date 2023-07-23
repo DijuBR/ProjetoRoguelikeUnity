@@ -18,7 +18,7 @@ public class TriggerPulo : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("ChaoTileMap"))
+        if (col.CompareTag("ChaoTileMap") || col.CompareTag("Plataforma"))
         {
             script.pulos = 1;
         }

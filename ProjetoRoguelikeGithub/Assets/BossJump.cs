@@ -12,6 +12,7 @@ public class BossJump : StateMachineBehaviour
     [Header("Variaveis")]
     private float speed = 0.7f;
     private float queda = 2f;
+    [Header("Timer")]
     public float tempoMin, tempoMax, timer;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -20,6 +21,8 @@ public class BossJump : StateMachineBehaviour
         playerPos = GameObject.FindWithTag("Player").GetComponent<Transform>();
         rb = animator.GetComponent<Rigidbody2D>();
         timer = Random.Range(tempoMin, tempoMax);
+
+        Destroy(GameObject.FindWithTag("BossTiro"));
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

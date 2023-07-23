@@ -16,6 +16,10 @@ TagManager:
   - DomoTileMap
   - InimigoTutorial
   - Audio
+  - BossTiroPos
+  - Plataforma
+  - Boss
+  - BossTiro
   layers:
   - Default
   - TransparentFX

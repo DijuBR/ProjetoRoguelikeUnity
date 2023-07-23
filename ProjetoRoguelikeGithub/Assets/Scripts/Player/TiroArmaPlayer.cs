@@ -41,7 +41,7 @@ public class TiroArmaPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Inimigo")
+        if (col.gameObject.tag == "Inimigo" || col.gameObject.tag == "Boss")
         {
                 Destroy(this.gameObject);
             audioManager.PlaySFX(audioManager.Hit);
@@ -57,13 +57,7 @@ public class TiroArmaPlayer : MonoBehaviour
             }
             //col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
         }
-        if (col.gameObject.CompareTag("ChaoTileMap"))
-        {
-            Destroy(this.gameObject);
-            audioManager.PlaySFX(audioManager.TiroExplodindo);
-
-        }
-        if (col.gameObject.CompareTag("DomoTileMap"))
+        if (col.gameObject.CompareTag("ChaoTileMap") || col.CompareTag("DomoTileMap") || col.CompareTag("Plataforma"))
         {
             Destroy(this.gameObject);
             audioManager.PlaySFX(audioManager.TiroExplodindo);

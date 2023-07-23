@@ -34,6 +34,10 @@ public class VidaPlayer : MonoBehaviour
        {
         Dano();
        }
+        if (col2.gameObject.CompareTag("Boss"))
+        {
+            DanoBoss();
+        }
     }
     public void Dano()
     {
@@ -117,6 +121,17 @@ public class VidaPlayer : MonoBehaviour
 
         estaImortal = false;
         Debug.Log("Player Imortal: " + estaImortal);
+    }
+
+    public void DanoBoss()
+    {
+        if (estaImortal == false)
+        {
+            GetComponent<PlayerStatus>().vida -= 1f;
+            GetComponent<FlashDano>().FlashRun();
+            audioManager.PlaySFX(audioManager.Dano);
+            StartCoroutine("TempImortal");
+        }
     }
     
 }
