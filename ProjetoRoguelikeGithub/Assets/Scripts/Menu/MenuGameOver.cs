@@ -7,15 +7,9 @@ public class MenuGameOver : MonoBehaviour
 {
     ControladorAudio audioManager;
 
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
-    }
-
     public void Start()
     {
-        
-        audioManager.PlaySFX(audioManager.Morte);
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
     public void Sair()
@@ -35,5 +29,12 @@ public class MenuGameOver : MonoBehaviour
     {
         audioManager.PlaySFX(audioManager.Botoes);
         SceneManager.LoadScene("TelaMenu");
+    }
+
+    public void TutorialFase()
+    {
+        audioManager.PlaySFX(audioManager.Botoes);
+        GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
+        SceneManager.LoadScene("CenaTutorial");
     }
 }

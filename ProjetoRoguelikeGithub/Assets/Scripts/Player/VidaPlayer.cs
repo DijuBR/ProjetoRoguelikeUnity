@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class VidaPlayer : MonoBehaviour
 {
     ControladorAudio audioManager;
+
+    public bool tutorial;
     
     [Header("VIDA")]
     public double vida;
@@ -96,9 +98,13 @@ public class VidaPlayer : MonoBehaviour
 
     void Morreu()
     {
-        if(vida <= 0)
+        if(vida <= 0 && tutorial == false)
         {
             SceneManager.LoadScene("MenuGameOver");
+        }
+        else if(vida <= 0 && tutorial == true)
+        {
+            SceneManager.LoadScene("CenaGameOverTutorial");
         }
     }
 
@@ -111,9 +117,6 @@ public class VidaPlayer : MonoBehaviour
 
         estaImortal = false;
         Debug.Log("Player Imortal: " + estaImortal);
-
-
-
     }
     
 }
