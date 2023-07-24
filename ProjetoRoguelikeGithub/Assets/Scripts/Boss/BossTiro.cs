@@ -47,7 +47,7 @@ public class BossTiro : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 6)
+        if (timer > 5)
         {
             Instantiate(explosao, transform.position, Quaternion.identity);
             Destroy(gameObject);

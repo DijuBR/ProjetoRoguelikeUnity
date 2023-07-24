@@ -54,6 +54,7 @@ public class TiroArmaPlayer : MonoBehaviour
             else
             {
                 col.GetComponent<BossScript>().vidaBoss -= dano;
+                audioManager.PlaySFX(audioManager.HitBoss);
             }
             //col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
         }

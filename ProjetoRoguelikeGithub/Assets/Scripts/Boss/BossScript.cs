@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BossScript : MonoBehaviour
 {
-    
+    ControladorAudio audioManager;
+
     [Header("Referencias")]
     public scoreScript score;
     public GameObject particula;
@@ -17,6 +18,8 @@ public class BossScript : MonoBehaviour
     public float vidaBossInicial;
     public float vidaBoss;
     public float vidaBossMax;
+    public GameObject tiroBoss;
+    public Transform tiroPos;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,9 @@ public class BossScript : MonoBehaviour
         Debug.Log(player.position);
         Refs();
         AplicarVida();
+        tiroPos = GameObject.FindWithTag("BossTiroPos").GetComponent<Transform>();
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
     // Update is called once per frame
@@ -62,5 +68,10 @@ public class BossScript : MonoBehaviour
     void Refs()
     {
         ParedeCol = GameObject.Find("ParedeCol").GetComponent<BoxCollider2D>();
+    }
+    void Evento()
+    {
+        audioManager.PlaySFX(audioManager.AtiraBoss);
+        Instantiate(tiroBoss, tiroPos.transform);
     }
 }

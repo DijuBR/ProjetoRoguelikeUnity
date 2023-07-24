@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossJump : StateMachineBehaviour
 {
+    ControladorAudio audioManager;
+    
     [Header("Refs")]
     private Transform posTop;
     private Transform playerPos;
@@ -17,10 +19,12 @@ public class BossJump : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
         posTop = GameObject.Find("BossTop").transform;
         playerPos = GameObject.FindWithTag("Player").GetComponent<Transform>();
         rb = animator.GetComponent<Rigidbody2D>();
-        timer = Random.Range(tempoMin, tempoMax);
+        //timer = Random.Range(tempoMin, tempoMax);
+        timer = tempoMax;
 
         Destroy(GameObject.FindWithTag("BossTiro"));
     }
@@ -28,15 +32,18 @@ public class BossJump : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
         if(timer <= 0)
         {
             rb.AddForce(Vector2.down * queda);
+            audioManager.PlayStomp(audioManager.Stomp);
         }
         else
         {
             timer -= Time.deltaTime;
+            Stomp(animator);
         }
-        Stomp(animator);
+        
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

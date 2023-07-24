@@ -7,6 +7,7 @@ public class ControladorAudio : MonoBehaviour
     [Header("-----------AudioSouce----------")]
 
     [SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioSource Stompsource;
 
     [Header("- Player Sons")]
     
@@ -25,7 +26,7 @@ public class ControladorAudio : MonoBehaviour
 
     [Header("- Boss Sons")]
     public AudioClip AtiraBoss;
-    public AudioClip AndaBoss;
+    public AudioClip HitBoss;
     public AudioClip Stomp;
 
     [Header("- Geral Sons")]
@@ -35,7 +36,7 @@ public class ControladorAudio : MonoBehaviour
 
     ControladorAudio audioManager;
 
-    private void Start()
+    public void Start()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
@@ -43,5 +44,10 @@ public class ControladorAudio : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
+    }
+
+    public void PlayStomp(AudioClip clip)
+    {
+        Stompsource.PlayOneShot(clip);
     }
 }

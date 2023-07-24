@@ -313,8 +313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoMin: 3
-  tempoMax: 5.5
-  timer: 0
+  tempoMax: 3
+  timer: 3
 --- !u!1102 &7016527527249587285
 AnimatorState:
   serializedVersion: 6
@@ -377,9 +377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78758a9e35aa8fe419d18c97cff854a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiroBoss: {fileID: 1545926208889361832, guid: a18b4d3e6f3ddd548a1e350bffb339c8, type: 3}
-  tiroBoss2: {fileID: 0}
-  tiroPos: {fileID: 0}
   tempoMin: 0
   tempoMax: 0
   timer: 0
