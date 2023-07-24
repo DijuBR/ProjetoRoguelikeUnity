@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Versao 0.2.9
+  m_text: Versao 0.5.1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631808fc62beda64098f1a435cb11705, type: 2}
   m_sharedMaterial: {fileID: 4378334481276280705, guid: 631808fc62beda64098f1a435cb11705, type: 2}
