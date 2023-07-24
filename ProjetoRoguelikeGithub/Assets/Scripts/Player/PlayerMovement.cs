@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     {
         forcaPulo = PlayerPrefs.GetFloat("FORCPULO");
         velPlayer = PlayerPrefs.GetFloat("VELPLAYER");
+        MovimentacaoDoPlayer();
+        Virar();
     }
 
     private void Virar() //Virar o Player
