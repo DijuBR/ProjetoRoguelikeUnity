@@ -21,6 +21,11 @@ public class cenaManagement : MonoBehaviour
     {
         SceneManager.LoadScene("TutorialFase");
     }
+
+    public void Boss()
+    {
+        SceneManager.LoadScene("SalaDoBoss");
+    }
 }
 
 

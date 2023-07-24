@@ -55,6 +55,7 @@ public class BossScript : MonoBehaviour
     void Morreu()
     {
         Instantiate(particula, transform.position, Quaternion.identity);
+        GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
         Destroy(this.gameObject);
     }
 
