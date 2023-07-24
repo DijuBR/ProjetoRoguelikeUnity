@@ -23,7 +23,7 @@ public class PainelMenu : MonoBehaviour
             {
                 Resumir();
             }
-            else
+            else if (!JogoPausado)  
             {
                 Pausar();
             }
