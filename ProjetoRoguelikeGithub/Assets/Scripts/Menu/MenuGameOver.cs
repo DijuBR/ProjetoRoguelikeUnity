@@ -34,8 +34,7 @@ public class MenuGameOver : MonoBehaviour
     public void TutorialFase()
     {
         audioManager.PlaySFX(audioManager.Botoes);
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().Resetar();
-        PlayerPrefs.SetFloat("VIDA", 3);
+        GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
         SceneManager.LoadScene("CenaTutorial");
     }
 }
