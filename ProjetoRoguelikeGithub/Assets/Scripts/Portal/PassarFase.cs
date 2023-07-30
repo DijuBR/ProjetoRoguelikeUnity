@@ -31,13 +31,13 @@ public class PassarFase : MonoBehaviour
     {
         if(col.CompareTag("Player") && concluido == true)
         {
-           SceneManager.LoadScene("CenaCartas");
+           SceneManager.LoadScene("CenaMostraFase");
         }
 
         if(col.CompareTag("Player") && concluido == true && GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao == 5)
         {
             GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
-            SceneManager.LoadScene("CartasBoss");
+            SceneManager.LoadScene("CenaMostraFase");
         }
     }
 
