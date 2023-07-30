@@ -56,6 +56,7 @@ public class BossScript : MonoBehaviour
     {
         Instantiate(particula, transform.position, Quaternion.identity);
         GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
+        GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score += 5;
         Destroy(this.gameObject);
     }
 

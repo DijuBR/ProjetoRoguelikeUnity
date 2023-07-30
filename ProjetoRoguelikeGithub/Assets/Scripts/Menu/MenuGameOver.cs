@@ -22,6 +22,7 @@ public class MenuGameOver : MonoBehaviour
     {
         audioManager.PlaySFX(audioManager.Botoes);
         GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
+        GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().Resetar();
         SceneManager.LoadScene("salaJogavel1");
     }
 
@@ -35,6 +36,7 @@ public class MenuGameOver : MonoBehaviour
     {
         audioManager.PlaySFX(audioManager.Botoes);
         GameObject.Find("Main Camera").GetComponent<PlayerStatus>().Resetar();
+        GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().Resetar();
         SceneManager.LoadScene("CenaTutorial");
     }
 }

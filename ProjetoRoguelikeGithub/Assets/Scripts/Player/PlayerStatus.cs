@@ -17,6 +17,7 @@ public class PlayerStatus : MonoBehaviour
     public float forcPulo;          //Força do pulo
     //Score
     public int pontuacao;
+    public int score;
     
     private void Start()
     {
@@ -30,6 +31,7 @@ public class PlayerStatus : MonoBehaviour
         fireRate = PlayerPrefs.GetFloat("FIRERATE");
         forcPulo = PlayerPrefs.GetFloat("FORCPULO");
         pontuacao = PlayerPrefs.GetInt("PONTUACAO");
+        score = PlayerPrefs.GetInt("SCORE");
     }
 
     private void Update()
@@ -47,6 +49,7 @@ public class PlayerStatus : MonoBehaviour
         PlayerPrefs.SetFloat("FORCPULO", forcPulo);
         //Score
         PlayerPrefs.SetInt("PONTUACAO", pontuacao);
+        PlayerPrefs.SetInt("SCORE", score);
     }
 
     public void Resetar()
@@ -63,6 +66,7 @@ public class PlayerStatus : MonoBehaviour
         numCora = 3;
 
         pontuacao= 0;
+        score = 0;
         //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer = 7;
         //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo = 7;
 
