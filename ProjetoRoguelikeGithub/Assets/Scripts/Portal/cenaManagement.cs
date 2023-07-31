@@ -14,6 +14,7 @@ public class cenaManagement : MonoBehaviour
         int randomIndex = Random.Range(0, cenas.Count);
         int cenaAtual = cenas[randomIndex];
         GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
+        GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score++;
         SceneManager.LoadScene(cenaAtual);
     }
 

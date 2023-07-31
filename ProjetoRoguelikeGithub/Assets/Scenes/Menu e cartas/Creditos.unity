@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voce derrotou o boss e terminou a primeira parte de portal huntes, obrigado
+  m_text: Voce derrotou o boss e terminou a primeira parte de portal hunters, obrigado
     por jogar!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 631808fc62beda64098f1a435cb11705, type: 2}

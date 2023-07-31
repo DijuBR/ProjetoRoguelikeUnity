@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1eb43d6975a7c4fb02eb9be9ba2c1b, type: 3}
   m_Name: FireRatePerk
   m_EditorClassIdentifier: 
-  quant: 0.25
+  quant: 0.1
   player: {fileID: 0}
   status: {fileID: 0}
+  info: 

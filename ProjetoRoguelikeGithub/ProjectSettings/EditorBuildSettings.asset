@@ -72,6 +72,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu e cartas/CartasBoss.unity
     guid: 1d4a4d97f96e7e444979c78eb2152e0c
   - enabled: 1
+    path: Assets/Scenes/Menu e cartas/CenaMostraFase.unity
+    guid: a9d441ec46d38a3449ef4946a2a12323
+  - enabled: 1
     path: Assets/Scenes/Menu e cartas/Creditos.unity
     guid: 030c1be6c6b78de438ba0d476f3fe1fb
   m_configObjects: {}
