@@ -10,6 +10,7 @@ public class BossScript : MonoBehaviour
     public scoreScript score;
     public GameObject particula;
     public Transform player;
+    public GameObject player2;
     public bool Virado = false;
     public BoxCollider2D ParedeCol;
     public Animator anim;
@@ -20,6 +21,7 @@ public class BossScript : MonoBehaviour
     public float vidaBossMax;
     public GameObject tiroBoss;
     public Transform tiroPos;
+    public float calcVida;
 
     // Start is called before the first frame update
     void Start()
@@ -62,13 +64,15 @@ public class BossScript : MonoBehaviour
 
     void AplicarVida()
     {
+        calcVida = 1.3f * player2.GetComponent<PlayerStatus>().dano + 1.25f * player2.GetComponent<PlayerStatus>().fireRate;
         score = GameObject.Find("Score").GetComponent<scoreScript>();
-        vidaBoss = vidaBossInicial + +1.55f * (score.pontuacao);
+        vidaBoss = vidaBossInicial + 1.35f * player2.GetComponent<PlayerStatus>().score + calcVida;
         vidaBossMax = vidaBoss;
     }
 
     void Refs()
     {
+        player2 = GameObject.FindWithTag("Player");
         ParedeCol = GameObject.Find("ParedeCol").GetComponent<BoxCollider2D>();
     }
     void Evento()

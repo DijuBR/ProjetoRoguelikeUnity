@@ -67,16 +67,6 @@ public class PlayerStatus : MonoBehaviour
 
         pontuacao= 0;
         score = 0;
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velPlayer = 7;
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().forcPulo = 7;
-
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().dano = 5;
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velTiro = 3;
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().disTiro = 0.7f;
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().fireRate = 1.7f;
-
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida = 3;
-        //GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().numCora = 3;
     }
 
 }
