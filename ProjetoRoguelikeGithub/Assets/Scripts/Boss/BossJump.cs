@@ -21,9 +21,7 @@ public class BossJump : StateMachineBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
         posTop = GameObject.Find("BossTop").transform;
-        playerPos = GameObject.FindWithTag("Player").GetComponent<Transform>();
         rb = animator.GetComponent<Rigidbody2D>();
-        //timer = Random.Range(tempoMin, tempoMax);
         timer = tempoMax;
 
         Destroy(GameObject.FindWithTag("BossTiro"));

@@ -19,8 +19,18 @@ public class EnemySpawn : MonoBehaviour
 
     public void Start()
     {
-        int spawn = Random.Range(1,5);
+        int spawn = 0;
         int spawnMax = 0;
+
+        if(GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score >= 0 && GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score <= 5)
+        {
+            spawn = Random.Range(2, 4);
+            Debug.Log("If 1");
+        }else if(GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score >= 6 && GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score <= 10)
+        {
+            spawn = Random.Range(4, 6);
+            Debug.Log("If 2");
+        }
 
         while (spawnMax != spawn)
         {
