@@ -8,19 +8,13 @@ public class PassarFase : MonoBehaviour
     private bool concluido = false;
     public PortalScript portalscript;
 
-    // Start is called before the first frame update
     void Start()
     {
         portalscript = GetComponent<PortalScript>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //if(GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos == 0 || GameObject.Find("SpawnerNoite").GetComponent<EnemySpawn>().inimigosnascidos == 0)
-        //{
-        //    concluido = true;   
-        //}
         if(portalscript.spawner.GetComponent<EnemySpawn>().inimigosnascidos == 0)
         {
             concluido = true;

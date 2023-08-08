@@ -4,27 +4,21 @@ using UnityEngine;
 
 public class Arma : MonoBehaviour
 {
-    public GameObject inimigo;
     public GameObject tiroPlayer;
     public Transform tiroPlayerPos;
     public Transform arma;
-
     ControladorAudio audioManager;
 
-    
     public float delayTiro;
     private float tiroCD = 0.0f;
     
-    // Start is called before the first frame update
     void Start()
     {
-        inimigo = GameObject.FindGameObjectWithTag("Inimigo");
         arma = GameObject.FindGameObjectWithTag("Arma").GetComponent<Transform>();
         delayTiro = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().fireRate;
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         delayTiro = PlayerPrefs.GetFloat("FIRERATE");

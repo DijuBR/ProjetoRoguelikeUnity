@@ -18,6 +18,7 @@ public class PlayerStatus : MonoBehaviour
     //Score
     public int pontuacao;
     public int score;
+    public int contador;
     
     private void Start()
     {
@@ -32,6 +33,7 @@ public class PlayerStatus : MonoBehaviour
         forcPulo = PlayerPrefs.GetFloat("FORCPULO");
         pontuacao = PlayerPrefs.GetInt("PONTUACAO");
         score = PlayerPrefs.GetInt("SCORE");
+        contador = PlayerPrefs.GetInt("contador");
     }
 
     private void Update()
@@ -50,6 +52,7 @@ public class PlayerStatus : MonoBehaviour
         //Score
         PlayerPrefs.SetInt("PONTUACAO", pontuacao);
         PlayerPrefs.SetInt("SCORE", score);
+        PlayerPrefs.SetInt("contador", contador);
     }
 
     public void Resetar()

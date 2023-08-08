@@ -21,16 +21,8 @@ public class TiroArmaPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dano = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().dano;
-        velTiro = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velTiro;
-        disTiro = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().disTiro;
-        tiroPlayerPos = GameObject.FindGameObjectWithTag("TiroPlayerPos").GetComponent<Transform>();
-        rb = GetComponent<Rigidbody2D>();
-        inimigo = GameObject.FindGameObjectWithTag("Inimigo");
+        Sets();
         rb.velocity = tiroPlayerPos.right * velTiro;
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
-
-
     }
     private void Update()
     {
@@ -56,7 +48,7 @@ public class TiroArmaPlayer : MonoBehaviour
                 col.GetComponent<BossScript>().vidaBoss -= dano;
                 audioManager.PlaySFX(audioManager.HitBoss);
             }
-            //col.GetComponent<VidaInimigo>().vidaInimigo -= dano;
+
         }
         if (col.gameObject.CompareTag("ChaoTileMap") || col.CompareTag("DomoTileMap") || col.CompareTag("Plataforma"))
         {
@@ -79,4 +71,14 @@ public class TiroArmaPlayer : MonoBehaviour
         audioManager.PlaySFX(audioManager.TiroExplodindo);
     }
 
+    void Sets()
+    {
+        dano = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().dano;
+        velTiro = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().velTiro;
+        disTiro = GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().disTiro;
+        tiroPlayerPos = GameObject.FindGameObjectWithTag("TiroPlayerPos").GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
+        inimigo = GameObject.FindGameObjectWithTag("Inimigo");
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
+    }
 }

@@ -61,8 +61,6 @@ public class PlayerMovement : MonoBehaviour
         Horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(Horizontal * velPlayer, rb.velocity.y);
 
-        
-
         if (Mathf.Abs(Horizontal) > 0)
         {
             CriaPoeira();

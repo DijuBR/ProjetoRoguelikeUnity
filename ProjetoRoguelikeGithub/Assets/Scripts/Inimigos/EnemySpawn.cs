@@ -7,6 +7,8 @@ public class EnemySpawn : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public Transform pos;
     public int inimigosnascidos;
+    private int spawn;
+    public int contador;
 
     void Spawn()
     {
@@ -19,14 +21,15 @@ public class EnemySpawn : MonoBehaviour
 
     public void Start()
     {
-        int spawn = 0;
+        contador = PlayerPrefs.GetInt("contador");
         int spawnMax = 0;
-
-        if(GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score >= 0 && GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score <= 5)
+        Debug.Log("Contador:" + contador);
+        if(contador <= 1)
         {
             spawn = Random.Range(2, 4);
             Debug.Log("If 1");
-        }else if(GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score >= 6 && GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score <= 10)
+        }
+        if(contador >= 2)
         {
             spawn = Random.Range(4, 6);
             Debug.Log("If 2");
@@ -39,5 +42,10 @@ public class EnemySpawn : MonoBehaviour
             inimigosnascidos = spawnMax;
             Debug.Log(spawnMax);
         }
+    }
+
+    private void Update()
+    {
+        PlayerPrefs.GetInt("contador", contador);
     }
 }
