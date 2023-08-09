@@ -7,8 +7,7 @@ public class EnemySpawn : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public Transform pos;
     public int inimigosnascidos;
-    private int spawn;
-    public int contador;
+    [SerializeField]private int spawn;
 
     void Spawn()
     {
@@ -21,19 +20,8 @@ public class EnemySpawn : MonoBehaviour
 
     public void Start()
     {
-        contador = PlayerPrefs.GetInt("contador");
+        spawn = PlayerPrefs.GetInt("spawn");
         int spawnMax = 0;
-        Debug.Log("Contador:" + contador);
-        if(contador <= 1)
-        {
-            spawn = Random.Range(2, 4);
-            Debug.Log("If 1");
-        }
-        if(contador >= 2)
-        {
-            spawn = Random.Range(4, 6);
-            Debug.Log("If 2");
-        }
 
         while (spawnMax != spawn)
         {
@@ -46,6 +34,6 @@ public class EnemySpawn : MonoBehaviour
 
     private void Update()
     {
-        PlayerPrefs.GetInt("contador", contador);
+        
     }
 }
