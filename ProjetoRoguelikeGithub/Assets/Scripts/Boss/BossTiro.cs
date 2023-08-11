@@ -32,7 +32,7 @@ public class BossTiro : MonoBehaviour
         if (other.gameObject.CompareTag("DomoTileMap") || other.gameObject.CompareTag("ChaoTileMap"))
         {
             MovimentoDoTiro();
-            speed -= 0.75f;
+            speed -= 0.90f;
         }
     }
     void MovimentoDoTiro()

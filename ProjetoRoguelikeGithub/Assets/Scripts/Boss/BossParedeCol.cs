@@ -11,9 +11,6 @@ public class BossParedeCol : MonoBehaviour
     {
         pai = GameObject.Find("Boss");
     }
-
-    
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("ChaoTileMap") && virado == false || col.CompareTag("DomoTileMap") && virado == false)

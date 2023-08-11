@@ -43,12 +43,6 @@ public class BossJump : StateMachineBehaviour
         }
         
     }
-
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-
-    }
-
     void Stomp(Animator anim)
     {
         anim.transform.position = posTop.position;

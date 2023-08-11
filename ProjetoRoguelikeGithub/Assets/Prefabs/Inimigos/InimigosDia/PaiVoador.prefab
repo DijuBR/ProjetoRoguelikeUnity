@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430836b51c1e9aa4793278aa83051850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 2.3
+  vel: 2.15
   voadorAtirando: {fileID: 1284881113698848661}
   animator: {fileID: 6526850986738249304}
 --- !u!114 &1284881113698848661
@@ -387,7 +387,7 @@ MonoBehaviour:
   - {x: -0.37545168, y: 0.18765764, z: 0}
   m_ShapePathHash: 733418065
   m_Mesh: {fileID: 0}
-  m_InstanceId: 68472
+  m_InstanceId: 30770
 --- !u!1 &4584944978266029439
 GameObject:
   m_ObjectHideFlags: 0

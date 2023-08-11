@@ -35,7 +35,6 @@ public class PortalBoss : MonoBehaviour
             SceneManager.LoadScene("Creditos");
         }
     }
-
     public void EventoPlay()
     {
         texto.SetActive(true);

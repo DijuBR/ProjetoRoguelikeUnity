@@ -23,7 +23,6 @@ public class BossScript : MonoBehaviour
     public Transform tiroPos;
     public float calcVida;
 
-    // Start is called before the first frame update
     void Start()
     {
         Debug.Log(player.position);
@@ -34,7 +33,6 @@ public class BossScript : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(vidaBoss <= 0)

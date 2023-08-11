@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4838183225634190544}
   - component: {fileID: 1222410592955895315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: -7635323028573187703, guid: 9bdf1874d408b834ba51c32fb2e4815e, type: 3}
   m_Color: {r: 1, g: 0.1868474, b: 0.08962262, a: 0.8156863}
   m_FlipX: 0

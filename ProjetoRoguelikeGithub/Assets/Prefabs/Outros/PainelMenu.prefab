@@ -160,6 +160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JogoPausado: 0
   menuPauseUI: {fileID: 6923628398834974140}
+  player: {fileID: 0}
+  arma: {fileID: 0}
 --- !u!1 &6923628399166035607
 GameObject:
   m_ObjectHideFlags: 0
