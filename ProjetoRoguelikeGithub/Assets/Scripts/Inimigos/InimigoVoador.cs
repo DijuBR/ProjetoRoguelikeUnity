@@ -31,7 +31,7 @@ public class InimigoVoador : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(distanciaPlayer));
 
-        if(distanciaPlayer < 10)
+        if(distanciaPlayer < 7.5f)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, vel * Time.deltaTime);
             voadorAtirando.enabled = false;
