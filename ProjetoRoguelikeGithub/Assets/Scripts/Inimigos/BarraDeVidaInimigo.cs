@@ -14,7 +14,6 @@ public class BarraDeVidaInimigo : MonoBehaviour
         pos = GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         pos.transform.rotation = Quaternion.Euler(0, 0, 0);

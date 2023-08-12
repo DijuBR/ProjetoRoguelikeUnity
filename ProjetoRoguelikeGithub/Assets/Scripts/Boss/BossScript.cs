@@ -78,4 +78,11 @@ public class BossScript : MonoBehaviour
         audioManager.PlaySFX(audioManager.AtiraBoss);
         Instantiate(tiroBoss, tiroPos.transform);
     }
+
+    void StompSom()
+    {
+        audioManager.PlayStomp(audioManager.Stomp);
+    }
+
+
 }

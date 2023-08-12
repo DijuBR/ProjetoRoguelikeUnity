@@ -34,7 +34,6 @@ public class BossJump : StateMachineBehaviour
         if(timer <= 0)
         {
             rb.AddForce(Vector2.down * queda);
-            audioManager.PlayStomp(audioManager.Stomp);
         }
         else
         {

@@ -7,7 +7,7 @@ public class EnemySpawn : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public Transform pos;
     public int inimigosnascidos;
-    [SerializeField]private int spawn;
+    [SerializeField] private int spawn;
 
     void Spawn()
     {
@@ -30,10 +30,5 @@ public class EnemySpawn : MonoBehaviour
             inimigosnascidos = spawnMax;
             Debug.Log(spawnMax);
         }
-    }
-
-    private void Update()
-    {
-        
     }
 }

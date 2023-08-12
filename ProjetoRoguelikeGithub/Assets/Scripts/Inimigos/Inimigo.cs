@@ -25,8 +25,7 @@ public class Inimigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //InimigoMovement();
-
+       
         Vector2 ponto = pontoAtual.position - transform.position;
 
         if(pontoAtual == pontoB.transform)

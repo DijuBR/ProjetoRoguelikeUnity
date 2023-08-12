@@ -26,7 +26,6 @@ public class AtirarInimigo : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckDistancia();
@@ -54,14 +53,11 @@ public class AtirarInimigo : MonoBehaviour
     }
     void CheckDistanciaVoador()
     {
-        
         float distancia = Vector2.Distance(transform.position, player.transform.position);
             if(distancia > dist)
             {
                 Atirar();
             }
-        
-       
     }
 
     void Settings()
