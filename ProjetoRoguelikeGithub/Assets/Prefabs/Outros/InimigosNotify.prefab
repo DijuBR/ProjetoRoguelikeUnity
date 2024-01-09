@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3251284287880807831}
   - component: {fileID: 3650024773058472394}
   - component: {fileID: 1859133592147155957}
+  - component: {fileID: 5705294151657326629}
   m_Layer: 0
   m_Name: InimigosNotify
   m_TagString: Untagged
@@ -102,3 +103,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5705294151657326629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579572320550646062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1ff6f45b4877244b759cb3e08162c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ini:
+  - {fileID: 4584944978266029439, guid: 34187fd675ea244428e48ac1549cef99, type: 3}
+  - {fileID: 5713024513279042285, guid: 9079762cdfb09774790a73695ba624b1, type: 3}
+  - {fileID: 1226869240895135631, guid: e82edebe7633f9d458c8ad3041fd87bb, type: 3}
