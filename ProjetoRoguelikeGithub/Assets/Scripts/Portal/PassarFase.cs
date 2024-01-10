@@ -45,10 +45,8 @@ public class PassarFase : MonoBehaviour
             SceneManager.LoadScene("CenaMostraFase");
         }
 
-        if(col.CompareTag("Player") && concluido == true && GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao == 5)
+        if(col.CompareTag("Player") && concluido == true) //tinha uma condição que usava o score, possiveis erros poderão estar relacionados aqui
         {
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score++;
             SceneManager.LoadScene("CenaMostraFase");
         }
     }

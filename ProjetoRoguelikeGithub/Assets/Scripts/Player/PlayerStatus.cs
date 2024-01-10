@@ -31,8 +31,6 @@ public class PlayerStatus : MonoBehaviour
         disTiro = PlayerPrefs.GetFloat("DISTIRO");
         fireRate = PlayerPrefs.GetFloat("FIRERATE");
         forcPulo = PlayerPrefs.GetFloat("FORCPULO");
-        pontuacao = PlayerPrefs.GetInt("PONTUACAO");
-        score = PlayerPrefs.GetInt("SCORE");
         spawn = PlayerPrefs.GetInt("spawn");
     }
 
@@ -50,8 +48,6 @@ public class PlayerStatus : MonoBehaviour
         PlayerPrefs.SetFloat("VELPLAYER", velPlayer);
         PlayerPrefs.SetFloat("FORCPULO", forcPulo);
         //Score
-        PlayerPrefs.SetInt("PONTUACAO", pontuacao);
-        PlayerPrefs.SetInt("SCORE", score);
         PlayerPrefs.SetInt("spawn", spawn);
     }
 
@@ -68,8 +64,6 @@ public class PlayerStatus : MonoBehaviour
         vida = 3;
         numCora = 3;
 
-        pontuacao= 0;
-        score = 0;
         spawn = 3;
     }
 

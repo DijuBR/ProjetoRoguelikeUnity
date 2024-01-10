@@ -20,10 +20,9 @@ public class PortalBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao == 7)
+        if(GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().vida == 3) //precisamos mudar essa condição, pois a anterior era a pontuação e o score que foram removidos
         {
             portalBoss.Play("Sobe");
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
             concluido = true;
         }
     }

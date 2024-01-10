@@ -31,7 +31,6 @@ public class SpawnerTutorialFase : MonoBehaviour
     }
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
 

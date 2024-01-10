@@ -7,7 +7,6 @@ public class BossScript : MonoBehaviour
     ControladorAudio audioManager;
 
     [Header("Referencias")]
-    public scoreScript score;
     public GameObject particula;
     public Transform player;
     public GameObject player2;
@@ -55,16 +54,13 @@ public class BossScript : MonoBehaviour
     void Morreu()
     {
         Instantiate(particula, transform.position, Quaternion.identity);
-        GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
-        GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().score += 5;
         Destroy(this.gameObject);
     }
 
     void AplicarVida()
     {
         calcVida = 1.3f * player2.GetComponent<PlayerStatus>().dano + 1.25f * player2.GetComponent<PlayerStatus>().fireRate;
-        score = GameObject.Find("Score").GetComponent<scoreScript>();
-        vidaBoss = vidaBossInicial + 1.35f * player2.GetComponent<PlayerStatus>().score + calcVida;
+        vidaBoss = vidaBossInicial + 1.35f + calcVida;
         vidaBossMax = vidaBoss;
     }
 

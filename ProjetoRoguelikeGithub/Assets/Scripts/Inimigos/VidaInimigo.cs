@@ -6,14 +6,12 @@ public class VidaInimigo : MonoBehaviour
 {
     public float vidaInimigoInicial;
     public float vidaInimigo, vidaIniMax;
-    public scoreScript score;
     public GameObject explosao;
     public GameObject player;
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        score = GameObject.Find("Score").GetComponent<scoreScript>();
         vidaInimigo = vidaInimigoInicial + 1.30f * player.GetComponent<PlayerStatus>().dano + 0.3f - player.GetComponent<PlayerStatus>().fireRate;
         vidaIniMax = vidaInimigo;
     }

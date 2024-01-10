@@ -31,8 +31,6 @@ public class InimSeguidorTutorial : MonoBehaviour
         }
     }
 
-
-
     void Movimento()
     {
         distancia = Vector2.Distance(transform.position, player.transform.position);

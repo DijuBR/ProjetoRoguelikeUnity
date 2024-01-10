@@ -17,10 +17,6 @@ public class PassarFaseTutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(GameObject.Find("Spawner").GetComponent<EnemySpawn>().inimigosnascidos == 0 || GameObject.Find("SpawnerNoite").GetComponent<EnemySpawn>().inimigosnascidos == 0)
-        //{
-        //    concluido = true;   
-        //}
         if (portalscripttutorial.spawner.GetComponent<SpawnerTutorial>().inimigosnascidos == 0)
         {
             concluido = true;
@@ -31,7 +27,6 @@ public class PassarFaseTutorial : MonoBehaviour
     {
         if (col.CompareTag("Player") && concluido == true)
         {
-            GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().pontuacao++;
             SceneManager.LoadScene("CenaCartasTutorial");
         }
     }
