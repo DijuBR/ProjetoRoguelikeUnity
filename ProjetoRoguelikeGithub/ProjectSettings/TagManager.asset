@@ -20,6 +20,7 @@ TagManager:
   - Plataforma
   - Boss
   - BossTiro
+  - LocSpawner
   layers:
   - Default
   - TransparentFX

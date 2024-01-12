@@ -9,9 +9,9 @@ public class ControleNotify : MonoBehaviour
 
     public void Awake() {
         pos = this.gameObject.transform;
-        int iniR = Random.Range(0, ini.Length);
     }
-    public void Criar(int iniR){
+    public void Criar(){
+        int iniR = Random.Range(0, ini.Length);
         GameObject iniC = Instantiate(ini[iniR], pos);
         iniC.transform.parent = null;
         
