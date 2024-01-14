@@ -9,12 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private Camera mainCam;
     private Transform playerTransform;
     private Rigidbody2D rb;
+    public StartStats sSPlayer;
 
     ControladorAudio audioManager;
 
     public ParticleSystem poeira;
     
-    [Header("Movimentação e Vida")]
+    [Header("Movimentaï¿½ï¿½o e Vida")]
     public float velPlayer;
     public float forcaPulo;
     public double vida;
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-    private bool virado = true;
+
 
     private void Start()
     {
@@ -46,20 +47,18 @@ public class PlayerMovement : MonoBehaviour
         if (worldMousePos.x > transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
-            virado = true;
             
         }
         if (worldMousePos.x < transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
-            virado = false;
             
         }
     }
     public void MovimentacaoDoPlayer()
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(Horizontal * velPlayer, rb.velocity.y);
+        rb.velocity = new Vector2(Horizontal * sSPlayer.moveSpeed, rb.velocity.y);
 
         if (Mathf.Abs(Horizontal) > 0)
         {
