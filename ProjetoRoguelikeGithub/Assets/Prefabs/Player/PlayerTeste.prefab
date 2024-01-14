@@ -4932,7 +4932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95cd460e1158e1544bcb4405b64cc7d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inimigo: {fileID: 0}
   tiroPlayer: {fileID: 7403304441912072969, guid: 43b1c89419063614db4f5440f8541a1a, type: 3}
   tiroPlayerPos: {fileID: 1164485387}
   arma: {fileID: 0}
@@ -5017,7 +5016,7 @@ MonoBehaviour:
   - {x: -0.31308877, y: -0.031843185, z: 0}
   m_ShapePathHash: 53601115
   m_Mesh: {fileID: 0}
-  m_InstanceId: -551224
+  m_InstanceId: 38802
 --- !u!1 &2078481578
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,6 +5081,7 @@ GameObject:
   - component: {fileID: 326542768812680849}
   - component: {fileID: 999822656}
   - component: {fileID: -1850909395480214553}
+  - component: {fileID: 3678223539461931459}
   m_Layer: 7
   m_Name: PlayerTeste
   m_TagString: Player
@@ -5190,10 +5190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd7a46c2bde3eb4796af535500743a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sSPlayer: {fileID: 0}
   poeira: {fileID: 1276550514}
-  velPlayer: 0
-  forcaPulo: 0
-  vida: 0
   pulos: 0
   animator: {fileID: 326542768812680849}
 --- !u!114 &1670767694
@@ -5217,6 +5215,8 @@ MonoBehaviour:
   velPlayer: 7
   forcPulo: 7
   pontuacao: 0
+  score: 0
+  spawn: 0
 --- !u!114 &1670767695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5229,6 +5229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a298b7385dc023845953b3a99e659ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorial: 0
+  ss: {fileID: 0}
   vida: 0
   numCora: 0
   coracao:
@@ -5321,7 +5323,21 @@ MonoBehaviour:
   - {x: -0.19216251, y: -0.181983, z: 0}
   m_ShapePathHash: 1467625341
   m_Mesh: {fileID: 0}
-  m_InstanceId: 106966
+  m_InstanceId: 38762
+--- !u!114 &3678223539461931459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010360680732094360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bf61b9b8715c14fa433b54b7e8951c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ss: {fileID: 11400000, guid: 52ebf80ade8b8344783e94a63bd953bc, type: 2}
+  stats: {fileID: 11400000, guid: 6b9a7c56516fa934686ee3f459165c7e, type: 2}
 --- !u!1 &4347287801835219556
 GameObject:
   m_ObjectHideFlags: 0
