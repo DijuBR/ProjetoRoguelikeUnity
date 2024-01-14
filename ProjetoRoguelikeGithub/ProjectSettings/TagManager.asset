@@ -21,6 +21,8 @@ TagManager:
   - Boss
   - BossTiro
   - LocSpawner
+  - SpawnPoint
+  - Salas
   layers:
   - Default
   - TransparentFX
