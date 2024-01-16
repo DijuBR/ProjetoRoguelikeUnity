@@ -11,9 +11,8 @@ public class VidaPlayer : MonoBehaviour
     public bool tutorial;
     
     [Header("VIDA")]
-    public Stats ss;
-    public float vida;
-    public float numCora;
+    public double vida;
+    public double numCora;
 
     public Image[] coracao;
     public Sprite fullCora;
@@ -44,7 +43,7 @@ public class VidaPlayer : MonoBehaviour
     {
         if(estaImortal == false)
         {
-            ss.vida -= 0.5f;
+            GetComponent<PlayerStatus>().vida -= 0.5f;
             GetComponent<FlashDano>().FlashRun();
             audioManager.PlaySFX(audioManager.Dano);
             StartCoroutine("TempImortal");
@@ -61,23 +60,23 @@ public class VidaPlayer : MonoBehaviour
 
     public void CoracoesCheck()
     {
-        if (ss.vida >= 6.1f)
+        if (vida >= 6.1f)
         {
-            ss.vida = 6f;
+            vida = 6f;
         }
 
-        if (ss.vida > numCora)
+        if (vida > numCora)
         {
-            numCora = ss.vida;
+            numCora = vida;
         }
 
         for (int i = 0; i < coracao.Length; i++)
         {
-            if (i < ss.vida)
+            if (i < vida)
             {
                 coracao[i].sprite = fullCora;
 
-                if (ss.vida == i + 0.5)
+                if (vida == i + 0.5)
                 {
                     coracao[i].sprite = halfCora;
                 }
@@ -103,11 +102,11 @@ public class VidaPlayer : MonoBehaviour
 
     void Morreu()
     {
-        if(ss.vida <= 0 && tutorial == false)
+        if(vida <= 0 && tutorial == false)
         {
             SceneManager.LoadScene("MenuGameOver");
         }
-        else if(ss.vida <= 0 && tutorial == true)
+        else if(vida <= 0 && tutorial == true)
         {
             SceneManager.LoadScene("CenaGameOverTutorial");
         }
@@ -128,7 +127,7 @@ public class VidaPlayer : MonoBehaviour
     {
         if (estaImortal == false)
         {
-            ss.vida -= 1f;
+            GetComponent<PlayerStatus>().vida -= 1f;
             GetComponent<FlashDano>().FlashRun();
             audioManager.PlaySFX(audioManager.Dano);
             StartCoroutine("TempImortal");

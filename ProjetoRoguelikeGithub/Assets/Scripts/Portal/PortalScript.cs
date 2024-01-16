@@ -5,7 +5,6 @@ using UnityEngine;
 public class PortalScript : MonoBehaviour
 {
     public GameObject texto;
-    public GameObject spawner;
 
     // Start is called before the first frame update
     void Start()
@@ -14,12 +13,9 @@ public class PortalScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (spawner.GetComponent<EnemySpawn>().inimigosnascidos == 0)
-        {
-            texto.SetActive(true);
+    
 
-        }
+    public void TextoTrue(){
+        texto.SetActive(true);
     }
 }

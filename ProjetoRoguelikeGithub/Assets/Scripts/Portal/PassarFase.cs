@@ -15,37 +15,18 @@ public class PassarFase : MonoBehaviour
 
     void Update()
     {
-        if(portalscript.spawner.GetComponent<EnemySpawn>().inimigosnascidos == 0)
-        {
-            concluido = true;
-        }
-
-        switch (GameObject.FindWithTag("Player").GetComponent<PlayerStatus>().pontuacao)
-        {
-            case (0):
-                GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().spawn = Random.Range(3, 4);
-                break;
-            case (1):
-                GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().spawn = Random.Range(3, 5);
-                break;
-            case (2):
-                GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().spawn = Random.Range(4, 6);
-                break;
-            case (3):
-                GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().spawn = Random.Range(5, 7);
-                break;
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Player") && concluido == true)
+        if(col.CompareTag("Player"))
         {
             GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().spawn++;
             SceneManager.LoadScene("CenaMostraFase");
         }
 
-        if(col.CompareTag("Player") && concluido == true) //tinha uma condição que usava o score, possiveis erros poderão estar relacionados aqui
+        if(col.CompareTag("Player") && concluido == true) //tinha uma condiï¿½ï¿½o que usava o score, possiveis erros poderï¿½o estar relacionados aqui
         {
             SceneManager.LoadScene("CenaMostraFase");
         }

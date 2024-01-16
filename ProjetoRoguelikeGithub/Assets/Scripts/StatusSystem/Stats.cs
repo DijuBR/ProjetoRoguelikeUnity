@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Stats", menuName = "Stats/OnGoingStatus")]
 public class Stats : ScriptableObject
 {
+    StartStats ss;
     //Vida
     [Header("Vida")]
     public float vida;
@@ -18,5 +19,9 @@ public class Stats : ScriptableObject
     //Movimentacao
     public float moveSpeed;
     public float jumpForce;
+
+    private void OnEnable() {
+        
+    }
 }
 

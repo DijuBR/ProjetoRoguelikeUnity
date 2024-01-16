@@ -9,17 +9,20 @@ public class PlayerMovement : MonoBehaviour
     private Camera mainCam;
     private Transform playerTransform;
     private Rigidbody2D rb;
-    public Stats sSPlayer;
     ControladorAudio audioManager;
     public ParticleSystem poeira;
     [Header("Movimenta��o e Vida")]
     public int pulos = 0;
+    public float moveSpeed;
+    public float jumpForce;
     public Animator animator;
 
 
 
     private void Start()
     {
+        jumpForce = PlayerPrefs.GetFloat("FORCPULO");
+        moveSpeed = PlayerPrefs.GetFloat("VELPLAYER");
         mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<ControladorAudio>();
@@ -48,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     public void MovimentacaoDoPlayer()
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(Horizontal * sSPlayer.moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(Horizontal * moveSpeed, rb.velocity.y);
 
         if (Mathf.Abs(Horizontal) > 0)
         {
@@ -70,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     public void Pular()
     {
         pulos--;
-        rb.velocity = new Vector2(rb.velocity.x, sSPlayer.jumpForce);
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         audioManager.PlaySFX(audioManager.Pulando);
     }
 
