@@ -164,10 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaInimigoInicial: 15
+  healthSys: {fileID: 11400000, guid: 058c5e63b13143b44bb1445ba90cca43, type: 2}
   vidaInimigo: 0
   vidaIniMax: 0
-  score: {fileID: 0}
+  vidaInimigoInicial: 0
   explosao: {fileID: 2265204949607933259, guid: 10088e31856a72743b993af0adec865f, type: 3}
   player: {fileID: 0}
 --- !u!114 &1345111410400224064
@@ -292,7 +292,7 @@ MonoBehaviour:
   - {x: -0.21867752, y: -0.1720047, z: 0}
   m_ShapePathHash: -274603787
   m_Mesh: {fileID: 0}
-  m_InstanceId: 49756
+  m_InstanceId: 33844
 --- !u!1001 &6643993476414346766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -300,6 +300,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5713024513279042280}
     m_Modifications:
+    - target: {fileID: 6643993476501452965, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6643993476501452966, guid: 5e81c57f85b6d5447b7a4ee79538c59c, type: 3}
       propertyPath: m_Name
       value: CanvasBarraDeVida

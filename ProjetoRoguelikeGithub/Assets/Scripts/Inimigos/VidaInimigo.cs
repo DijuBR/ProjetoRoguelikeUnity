@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class VidaInimigo : MonoBehaviour
 {
-    public float vidaInimigoInicial;
-    public float vidaInimigo, vidaIniMax;
+    public EnemyHealthSystem healthSys;
+    public float vidaInimigo, vidaIniMax, vidaInimigoInicial;
     public GameObject explosao;
     public GameObject player;
-
+    private void Awake() 
+    {
+        vidaInimigo = healthSys.vidaAtual;
+    }
     private void Start()
     {
         player = GameObject.FindWithTag("Player");

@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Cartas : MonoBehaviour
+public class PlayerHitbox : MonoBehaviour
 {
+    public PlayerStatus status;
 
-   
+    
 }

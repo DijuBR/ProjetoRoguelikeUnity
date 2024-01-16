@@ -238,10 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b34decd7de9806429d3f2f89ff86c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaInimigoInicial: 25
+  healthSys: {fileID: 11400000, guid: 058c5e63b13143b44bb1445ba90cca43, type: 2}
   vidaInimigo: 0
   vidaIniMax: 0
-  score: {fileID: 0}
+  vidaInimigoInicial: 0
   explosao: {fileID: 7662578979842137004, guid: 2b2518fa8f977344a9c97f5d174915ef, type: 3}
   player: {fileID: 0}
 --- !u!50 &6791009251606006148
@@ -387,7 +387,7 @@ MonoBehaviour:
   - {x: -0.37545168, y: 0.18765764, z: 0}
   m_ShapePathHash: 733418065
   m_Mesh: {fileID: 0}
-  m_InstanceId: 22488
+  m_InstanceId: 34234
 --- !u!1 &4584944978266029439
 GameObject:
   m_ObjectHideFlags: 0

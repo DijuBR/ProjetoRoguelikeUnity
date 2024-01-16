@@ -33,6 +33,7 @@ public class VidaPlayer : MonoBehaviour
        if (col2.gameObject.CompareTag("Inimigo") || (col2.gameObject.CompareTag("InimigoTutorial")))
        {
         Dano();
+        
        }
         if (col2.gameObject.CompareTag("Boss"))
         {
