@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1345111410400224064}
   - component: {fileID: 7779970455973539953}
   - component: {fileID: 5480708676985037324}
+  - component: {fileID: 9084591229643240957}
   m_Layer: 8
   m_Name: InimigoPerseguidor
   m_TagString: Inimigo
@@ -292,7 +293,20 @@ MonoBehaviour:
   - {x: -0.21867752, y: -0.1720047, z: 0}
   m_ShapePathHash: -274603787
   m_Mesh: {fileID: 0}
-  m_InstanceId: 33844
+  m_InstanceId: 22756
+--- !u!114 &9084591229643240957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713024513279042285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a97668ee0c9364c89f83b6f94389d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 0}
 --- !u!1001 &6643993476414346766
 PrefabInstance:
   m_ObjectHideFlags: 0
