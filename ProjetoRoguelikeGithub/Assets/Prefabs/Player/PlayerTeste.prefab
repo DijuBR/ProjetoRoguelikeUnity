@@ -5016,7 +5016,7 @@ MonoBehaviour:
   - {x: -0.31308877, y: -0.031843185, z: 0}
   m_ShapePathHash: 53601115
   m_Mesh: {fileID: 0}
-  m_InstanceId: -16178
+  m_InstanceId: 22428
 --- !u!1 &2078481578
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,6 +5082,7 @@ GameObject:
   - component: {fileID: 999822656}
   - component: {fileID: -1850909395480214553}
   - component: {fileID: 1261980059998413086}
+  - component: {fileID: 1999458492056268789}
   m_Layer: 7
   m_Name: PlayerTeste
   m_TagString: Player
@@ -5324,7 +5325,7 @@ MonoBehaviour:
   - {x: -0.19216251, y: -0.181983, z: 0}
   m_ShapePathHash: 1467625341
   m_Mesh: {fileID: 0}
-  m_InstanceId: -16160
+  m_InstanceId: 22388
 --- !u!114 &1261980059998413086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5337,6 +5338,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 066c0a4be37e11747bd150e4ad653c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  status: {fileID: 0}
+--- !u!114 &1999458492056268789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010360680732094360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a97668ee0c9364c89f83b6f94389d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: 0e834c57eae9a8e4aa8c02596aa802d0, type: 2}
+  hp: 0
+  hpMax: 0
+  hpMin: 0
+  dmgAmount: 0
+  fireRate: 0
+  shotSpeed: 0
+  shotRange: 0
+  moveSpeed: 0
+  jumpForce: 0
+  luck: 0
+  armor: 0
 --- !u!1 &4347287801835219556
 GameObject:
   m_ObjectHideFlags: 0

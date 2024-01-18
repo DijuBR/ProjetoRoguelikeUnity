@@ -6,6 +6,8 @@ public class EntityStatus : MonoBehaviour
 {
     public UniStatusSys stat;
 
+    public HealthBar healthBar;
+
     //Refs HealthSystem
     [Header("Health")]
     public float hp, hpMax, hpMin ;
@@ -28,6 +30,12 @@ public class EntityStatus : MonoBehaviour
         moveSpeed = stat.moveSpeed;
         jumpForce = stat.jumpForce;
     }
-    
+
+    public void Start()
+    {
+        hpMax = hp;
+        healthBar.MaxHealth(hpMax);
+    }
+
 
 }
