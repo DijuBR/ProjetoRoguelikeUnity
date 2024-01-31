@@ -30,12 +30,4 @@ public class EntityStatus : MonoBehaviour
         moveSpeed = stat.moveSpeed;
         jumpForce = stat.jumpForce;
     }
-
-    public void Start()
-    {
-        hpMax = hp;
-        healthBar.MaxHealth(hpMax);
-    }
-
-
 }

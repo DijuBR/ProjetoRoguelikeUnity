@@ -12,6 +12,8 @@ public abstract class ItemSystem
 
     }
    public virtual void Update(PlayerStatus status, int stack)
+
+   
    {
 
    }

@@ -6,25 +6,22 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
-
-    public VidaPlayer player;
-
-    public PlayerStatus status;
-
+    public HealthSystem healthSys;
     public void Awake()
     {
-        status = GameObject.FindWithTag("Player").GetComponent<PlayerStatus>();
+        healthSys = GameObject.FindWithTag("Player").GetComponent<HealthSystem>();
     }
 
+    public void SetHealth(float health)
+    {
+        slider.value = health;
+    }
     public void MaxHealth(float health)
     {
         slider.maxValue = health;
         slider.value = health;
     }
     
-    public void SetHealth(float health)
-    {
-        slider.value = health;
-    }
+    
 
 }

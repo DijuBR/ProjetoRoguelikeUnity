@@ -5,15 +5,11 @@ using UnityEngine;
 public class PlayerStatus : MonoBehaviour
 {
     public List<ItemList> items = new List<ItemList>();
-
-
-    //Vida
-    public float vida;              //Vida
-    public float numCora;           //N�mero de cora��es
-    //Tiro
-    public float   dano;              //Dano
-    public float velTiro;           //Velocidade da bala
-    public float disTiro;           //Dist�ncia m�xima da bala
+    public float vida;              
+    public float numCora;           
+    public float   dano;              
+    public float velTiro;           
+    public float disTiro;          
     public float fireRate;          //Velocidade que atira
     //Movimenta��o
     public float velPlayer;         //Velocidade do jogador
