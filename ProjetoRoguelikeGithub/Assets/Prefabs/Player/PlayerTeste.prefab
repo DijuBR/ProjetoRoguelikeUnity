@@ -5016,7 +5016,7 @@ MonoBehaviour:
   - {x: -0.31308877, y: -0.031843185, z: 0}
   m_ShapePathHash: 53601115
   m_Mesh: {fileID: 0}
-  m_InstanceId: 22022
+  m_InstanceId: 21848
 --- !u!1 &2078481578
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,6 +5082,7 @@ GameObject:
   - component: {fileID: 999822656}
   - component: {fileID: -1850909395480214553}
   - component: {fileID: 1999458492056268789}
+  - component: {fileID: 2260923176916138342}
   m_Layer: 7
   m_Name: PlayerTeste
   m_TagString: Player
@@ -5324,7 +5325,7 @@ MonoBehaviour:
   - {x: -0.19216251, y: -0.181983, z: 0}
   m_ShapePathHash: 1467625341
   m_Mesh: {fileID: 0}
-  m_InstanceId: 21980
+  m_InstanceId: 21808
 --- !u!114 &1999458492056268789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5350,6 +5351,27 @@ MonoBehaviour:
   jumpForce: 0
   luck: 0
   armor: 0
+--- !u!114 &2260923176916138342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010360680732094360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af7e8479cb08f040aa2cdea9c4ef9cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesCoracoes:
+  - {fileID: -4201888350839978331, guid: dcafc77113bf30448a00f56756d91e98, type: 3}
+  - {fileID: 6547615354634196092, guid: ba94fbe760dc9be43b11e0e3482d1cca, type: 3}
+  - {fileID: 21300000, guid: 14526998bf86cc04c99db77047b2b5be, type: 3}
+  cont: 
+  full: 
+  escudo: 
+  textoteste: 
+  putaquepariu: 
 --- !u!1 &4347287801835219556
 GameObject:
   m_ObjectHideFlags: 0

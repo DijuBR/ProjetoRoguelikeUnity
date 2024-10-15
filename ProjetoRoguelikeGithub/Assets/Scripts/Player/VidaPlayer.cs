@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class VidaPlayer : MonoBehaviour
 {
+    //NÃO APAGAR ARQUIVO, USAR DE REFERÊNCIA PARA O SCRIPT PRINCIPAL
     ControladorAudio audioManager;
 
     public bool tutorial;
