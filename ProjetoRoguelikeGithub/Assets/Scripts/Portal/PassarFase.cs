@@ -23,7 +23,7 @@ public class PassarFase : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             GameObject.Find("PlayerTeste").GetComponent<PlayerStatus>().spawn++;
-            SceneManager.LoadScene("CenaMostraFase");
+           
         }
 
         if(col.CompareTag("Player") && concluido == true) //tinha uma condi��o que usava o score, possiveis erros poder�o estar relacionados aqui

@@ -7,10 +7,13 @@ using UnityEngine.UI;
 public class VidaPlayerNOVO : MonoBehaviour
 {
    ControladorAudio audioManager;
-   public float vida;
+   [Header("---------VARIAVEIS IMORTALIDADE----------")]
+   private bool estaImortal;
+   public int tempoImortal;
+   
+   [Header("---------CORACOES GERAL---------")]
    public int numCoracoes;
-   [Header("---------TIPOS E QUANTIDADE DE CORACOES")]
-
+   public float vida;
    public Image[] imgCoracoes;
    public Sprite coraVazio, coraCheio, coraEscudo, coraMetade;
 
@@ -24,8 +27,14 @@ public class VidaPlayerNOVO : MonoBehaviour
       
    }
 
-
-
+    private void OnCollisionStay2D(Collision2D col2)
+    {
+       if (col2.gameObject.CompareTag("Inimigo"))
+       {
+        Dano();
+        
+       }
+    }
    void ReferenciarCoracoes(){
 
       /*EM ORDEM, ELE VAI:
@@ -37,7 +46,6 @@ public class VidaPlayerNOVO : MonoBehaviour
       {
          if(i <vida){
             imgCoracoes[i].sprite = coraCheio;
-
             if(vida == i + 0.5){
                imgCoracoes[i].sprite = coraMetade;
             }
@@ -57,8 +65,25 @@ public class VidaPlayerNOVO : MonoBehaviour
       }
 
    }
-
-
+   private IEnumerator TempImortal()
+    {
+        estaImortal = true;
+        Debug.Log("Player Imortal: " + estaImortal);
+        yield return new WaitForSeconds(tempoImortal);
+        estaImortal = false;
+        Debug.Log("Player Imortal: " + estaImortal);
+    }
+   public void Dano(int danoRecebido)
+    {
+        if(estaImortal == false)
+        {
+            vida -= danoRecebido;
+            GetComponent<FlashDano>().FlashRun();
+            audioManager.PlaySFX(audioManager.Dano);
+            StartCoroutine("TempImortal");
+        }
+        
+    }
 }
 
 

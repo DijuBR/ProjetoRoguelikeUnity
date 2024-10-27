@@ -31,7 +31,7 @@ public class VidaPlayer : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D col2)
     {
-       if (col2.gameObject.CompareTag("Inimigo") || (col2.gameObject.CompareTag("InimigoTutorial")))
+       if (col2.gameObject.CompareTag("Inimigo"))
        {
         Dano();
         
@@ -45,7 +45,7 @@ public class VidaPlayer : MonoBehaviour
     {
         if(estaImortal == false)
         {
-            GetComponent<PlayerStatus>().vida -= 0.5f;
+            vida -= 1;
             GetComponent<FlashDano>().FlashRun();
             audioManager.PlaySFX(audioManager.Dano);
             StartCoroutine("TempImortal");

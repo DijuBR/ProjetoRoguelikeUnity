@@ -8,11 +8,9 @@ public class BossJump : StateMachineBehaviour
     
     [Header("Refs")]
     private Transform posTop;
-    private Transform playerPos;
     private Rigidbody2D rb;
 
     [Header("Variaveis")]
-    private float speed = 0.7f;
     private float queda = 2f;
     [Header("Timer")]
     public float tempoMin, tempoMax, timer;

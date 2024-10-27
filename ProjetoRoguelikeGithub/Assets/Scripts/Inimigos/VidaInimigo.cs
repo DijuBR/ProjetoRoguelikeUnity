@@ -15,7 +15,7 @@ public class VidaInimigo : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        vidaInimigo = vidaInimigoInicial + 1.30f * player.GetComponent<PlayerStatus>().dano + 0.3f - player.GetComponent<PlayerStatus>().fireRate;
+        vidaInimigo = vidaInimigoInicial;
         vidaIniMax = vidaInimigo;
     }
     
